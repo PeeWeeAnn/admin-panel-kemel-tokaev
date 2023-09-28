@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='reset.css'>
+    <link rel='stylesheet' href='style.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <title>Авторизация</title>
+</head>
+
+<body>
+    <section class="authorization">
+        <div class="_container authorization-container">
+            <div class="authorization-wrapper">
+                <div class="authorization-block">
+                    <div class="authorization__heading authorization-heading">
+                        <div class="authorization-heading__circle">
+                            <span>
+                                К
+                            </span>
+                        </div>
+                        <h6 class="authorization-heading__header">
+                            Кемель Токаев
+                        </h6>
+                    </div>
+                    <h2 class="authorization__header">
+                        Авторизация
+                    </h2>
+                    <form class="authorization__form form">
+                        <div class="form__data form-data">
+                            <div class="form-data__email form-data-email">
+                                <label class="form-data-email__label" for="email">
+                                    Введите E-mail
+                                </label>
+                                <input class="form-data-email__input" type="email" name="email"
+                                    placeholder="Введите ваш E-mail">
+                            </div>
+                            <div class="form-data__password form-data-password">
+                                <label class="form-data-password__label" for="password">
+                                    Пароль
+                                </label>
+                                <div class="form-data-password__block">
+                                    <input class="form-data-password__input" type="password" name="password"
+                                        placeholder="Пароль">
+                                    <button class="form-data-password__button">
+                                        <img src="../src/img/icons/view-hide.svg" alt="">
+                                    </button>
+                                </div>
+                                <a class="form-data-password__link" href="#">
+                                    Забыли пароль?
+                                </a>
+                            </div>
+                        </div>
+                        <div class="form__submit form-submit">
+                            <button class="form-submit__button button-dark-grey">
+                                Войти
+                            </button>
+                            <a class="form-submit__link" href="#">
+                                Зарегистрировать
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="authorization-background">
+                <img class="authorization-background__image" src="../src/img/image/authorization/background.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <script src="bundle.js"></script>
+</body>
+
+</html>

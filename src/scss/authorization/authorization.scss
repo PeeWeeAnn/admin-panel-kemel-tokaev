@@ -1,0 +1,114 @@
+@import "../_variables/variables";
+
+.authorization {
+    height: 100%;
+}
+
+.authorization-container {
+    display: flex;
+    height: 100%;
+}
+
+.authorization-wrapper {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.authorization-background {
+    &__image {
+        position: absolute;
+        width: 47%;
+        height: 100%;
+        right: 0;
+        object-fit: cover;
+    }
+}
+
+.authorization-block {
+    width: 433px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.authorization-heading {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    &__circle {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 58px;
+        padding: 10px;
+        background: $dark-grey;
+    }
+
+    &__circle span {
+        font-family: "Alice";
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+        color: $text-white;
+    }
+
+    &__header {
+        font-size: 18px;
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.form-data {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-data-email {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-data-password {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    &__block {
+        position: relative;
+    }
+
+    &__button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: transparent;
+        width: 34px;
+        height: 24px;
+        padding: 0;
+    }
+
+    &__link {
+        text-align: right;
+        text-decoration: none;
+    }
+}
+
+.form-submit {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
