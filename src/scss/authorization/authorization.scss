@@ -23,6 +23,10 @@
         height: 100%;
         right: 0;
         object-fit: cover;
+
+        @include _1600 {
+            width: 50%;
+        }
     }
 }
 
@@ -76,6 +80,12 @@
     gap: 20px;
 }
 
+.form-data-name {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
 .form-data-email {
     display: flex;
     flex-direction: column;
@@ -110,5 +120,11 @@
 .form-submit {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 20px;
+
+    &__block {
+        display: flex;
+        gap: 5px;
+    }
 }

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='reset.css'>
+    <link rel='stylesheet' href='style.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <title>Главная страница</title>
+</head>
+
+<body>
+
+    <section class="section-creativity">
+        <div class="section-wrapper">
+            <aside class="sidebar">
+                <div class="sidebar__heading sidebar-heading">
+                    <div class="sidebar-heading__circle">
+                        <span>
+                            К
+                        </span>
+                    </div>
+                    <h6 class="sidebar-heading__header">
+                        Кемель Токаев
+                    </h6>
+                </div>
+                <ul class="sidebar__navigation sidebar-navigation">
+                    <li class="sidebar-navigation__item">
+                        <a class="sidebar-navigation__link" href="home.html">
+                            <img class="sidebar-navigation__image" src="../src/img/icons/home-dark.svg" alt="">
+                            <span class="sidebar-navigation__text">Главная страница</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-navigation__item sidebar-navigation-item__sections">
+                        <a class="sidebar-navigation__link sidebar-navigation-item__active"
+                            href="section-creativity.html">
+                            <img class="sidebar-navigation__image" src="../src/img/icons/file-white.svg" alt="">
+                            <span class="sidebar-navigation__text">Разделы</span>
+                        </a>
+                        <ul class="sections__sub-navigation sections-sub-navigation">
+                            <li class="sections-sub-navigation__item">
+                                <a class="sections-sub-navigation__link" href="section-creativity.html">
+                                    <div class="sections-sub-navigation__image">
+                                        <img src="../src/img/icons/circle-dark.svg" alt="">
+                                    </div>
+                                    <span class="sections-navigation__text">Творчество</span>
+                                </a>
+                            </li>
+                            <li class="sections-sub-navigation__item">
+                                <a class="sections-sub-navigation__link" href="#">
+                                    <div class="sections-sub-navigation__image">
+                                        <img src="../src/img/icons/circle.svg" alt="">
+                                    </div>
+                                    <span class="sections-navigation__text">Слово о Кемеле</span>
+                                </a>
+                            </li>
+                            <li class="sections-sub-navigation__item sections-gallery">
+                                <a class="sections-sub-navigation__link" href="#">
+                                    <div class="sections-sub-navigation__image">
+                                        <img src="../src/img/icons/circle.svg" alt="">
+                                    </div>
+                                    <span class="sections-navigation__text">Галерея</span>
+                                </a>
+                                <ul class="sections-gallery__sub-navigation sections-gallery-sub-navigation">
+                                    <li class="sections-gallery-sub-navigation__item">
+                                        <a class="sections-gallery-sub-navigation__link" href="#">Фото</a>
+                                    </li>
+                                    <li class="sections-gallery-sub-navigation__item">
+                                        <a class="sections-gallery-sub-navigation__link" href="#">Интервью</a>
+                                    </li>
+                                    <li class="sections-gallery-sub-navigation__item">
+                                        <a class="sections-gallery-sub-navigation__link" href="#">Фильмы</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <button class="sidebar__button sidebar-button button-dark-grey">
+                    <img class="sidebar-button__image" src="../src/img/icons/sign-out.svg" alt="">
+                    Выйти
+                </button>
+            </aside>
+            <main class="section">
+                <header class="header">
+                    <h1 class="header__heading">
+                        Разделы | Творчество
+                    </h1>
+                    <div class="header__image">
+                        <img src="../src/img/icons/avatar.svg" alt="">
+                    </div>
+                </header>
+                <div class="section__content section-content">
+                    <h2 class="section-content__header">
+                        Добавление новой книги
+                    </h2>
+                    <div class="section-content__block section-content-block">
+                        <h3 class="section-content-block__header">
+                            Абзац
+                        </h3>
+                        <form class="section-content-block__form section-content-block-form">
+                            <div class="section-content-block-form__information-3">
+                                <label for="book1-section">Выберите раздел</label>
+                                <select name="" id="book1-section">
+                                    <option value="disabled" disabled selected>Выберите из списка</option>
+                                    <option value="law">Право</option>
+                                    <option value="economy">Экономика</option>
+                                </select>
+                            </div>
+                            <div class="section-content-block-form__information-3">
+                                <label for="book1-genre">Жанр</label>
+                                <select name="" id="book1-genre">
+                                    <option value="disabled" disabled selected>Выберите из списка</option>
+                                    <option value="law">Беллетристика</option>
+                                    <option value="economy">Проза</option>
+                                </select>
+                            </div>
+                            <div class="section-content-block-form__information-3">
+                                <label for="book1-year">Введите год написания книги</label>
+                                <select name="" id="book1-year">
+                                    <option value="disabled" disabled selected>Выберите из списка</option>
+                                    <option value="law">2022</option>
+                                    <option value="economy">2021</option>
+                                </select>
+                            </div>
+                        </form>
+                        <form class="section-content-block__form section-content-block-form">
+                            <div class="section-content-block-form__information-3">
+                                <label for="book1-place-writing">Введите место написания книги</label>
+                                <select name="" id="book1-place-writing">
+                                    <option value="disabled" disabled selected>Например: Алматы</option>
+                                    <option value="law">Астана</option>
+                                    <option value="economy">Алматы</option>
+                                </select>
+                            </div>
+                            <div class="section-content-block-form__information-3">
+                                <label for="book1-author">Автор</label>
+                                <input type="text" id="book1-author" disabled placeholder="Кемель Токаев">
+                                <button id="editInput" class="button-edit">
+                                    <img src="../src/img/icons/edit.svg" alt="">
+                                </button>
+                            </div>
+                            <div class="section-content-block-form__information-3">
+                            </div>
+                        </form>
+                        <form class="section-content-block__form section-content-block-form">
+                            <div class="section-content-block-form__information-3">
+                                <label for="book1-name-rus">Введите название книги (на русском)</label>
+                                <input type="text" id="book1-name-rus" placeholder="Название">
+                            </div>
+                            <div class="section-content-block-form__information-3">
+                                <label for="book1-name-kaz">Введите название книги (на казахском)</label>
+                                <input type="text" id="book1-name-kaz" placeholder="Название">
+                            </div>
+                            <div class="section-content-block-form__information-3">
+                            </div>
+                        </form>
+                        <form class="section-content-block__form section-content-block-form">
+                            <div class="section-content-block-form__information-1">
+                                <label for="book1-description-rus">Описание на русском</label>
+                                <input type="text" id="book1-description-rus" placeholder="О чем книга">
+                            </div>
+                        </form>
+                        <form class="section-content-block__form section-content-block-form">
+                            <div class="section-content-block-form__information-1">
+                                <label for="book1-description-kaz">Описание на казахском</label>
+                                <input type="text" id="book1-description-kaz" placeholder="О чем книга">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="section-content__block section-content-block">
+                        <h3 class="section-content-block__header">
+                            Файлы
+                        </h3>
+                        <form class="section-content-block__form section-content-block-form">
+                            <button class="section-content-block-form__button button-dashed">
+                                <img src="../src/img/icons/load-dark.svg" alt="">
+                                Загрузить печатную версию
+                            </button>
+                            <button class="section-content-block-form__button button-dashed">
+                                <img src="../src/img/icons/load-dark.svg" alt="">
+                                Загрузить аудиоверсию
+                            </button>
+                            <button class="section-content-block-form__button button-dashed">
+                                <img src="../src/img/icons/load-dark.svg" alt="">
+                                Загрузить обложку
+                            </button>
+                        </form>
+                    </div>
+                    <button class="section-content__button button-dashed">
+                        <img src="../src/img/icons/add-round.svg" alt="">
+                        Добавить раздел
+                    </button>
+                    <button class="section-content__button button-dashed">
+                        <img src="../src/img/icons/add-round.svg" alt="">
+                        Добавить книгу
+                    </button>
+                    <button class="section-content__button button-grey">
+                        Редактировать добавленные
+                    </button>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <script src="bundle.js"></script>
+</body>
+
+</html>
