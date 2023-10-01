@@ -51,7 +51,7 @@
                                 </a>
                             </li>
                             <li class="sections-sub-navigation__item">
-                                <a class="sections-sub-navigation__link" href="#">
+                                <a class="sections-sub-navigation__link" href="section-word.html">
                                     <div class="sections-sub-navigation__image">
                                         <img src="../src/img/icons/circle.svg" alt="">
                                     </div>
@@ -59,21 +59,25 @@
                                 </a>
                             </li>
                             <li class="sections-sub-navigation__item sections-gallery">
-                                <a class="sections-sub-navigation__link" href="#">
+                                <a class="sections-sub-navigation__link" href="section-gallery-photo.html">
                                     <div class="sections-sub-navigation__image">
                                         <img src="../src/img/icons/circle.svg" alt="">
                                     </div>
                                     <span class="sections-navigation__text">Галерея</span>
                                 </a>
-                                <ul class="sections-gallery__sub-navigation sections-gallery-sub-navigation">
+                                <ul
+                                    class="sections-gallery__sub-navigation sections-gallery-sub-navigation sub-navigation-hidden">
                                     <li class="sections-gallery-sub-navigation__item">
-                                        <a class="sections-gallery-sub-navigation__link" href="#">Фото</a>
+                                        <a class="sections-gallery-sub-navigation__link"
+                                            href="section-gallery-photo.html">Фото</a>
                                     </li>
                                     <li class="sections-gallery-sub-navigation__item">
-                                        <a class="sections-gallery-sub-navigation__link" href="#">Интервью</a>
+                                        <a class="sections-gallery-sub-navigation__link"
+                                            href="section-gallery-interview.html">Интервью</a>
                                     </li>
                                     <li class="sections-gallery-sub-navigation__item">
-                                        <a class="sections-gallery-sub-navigation__link" href="#">Фильмы</a>
+                                        <a class="sections-gallery-sub-navigation__link"
+                                            href="section-gallery-film.html">Фильмы</a>
                                     </li>
                                 </ul>
                             </li>
@@ -103,11 +107,11 @@
                             Заголовок
                         </h3>
                         <form class="home-content-block__form home-content-block-form">
-                            <div class="home-content-block-form__information">
+                            <div>
                                 <label for="name-topic-rus">Название темы (русский язык)</label>
                                 <input type="text" placeholder="Введите название темы" id="name-topic-rus">
                             </div>
-                            <div class="home-content-block-form__information">
+                            <div>
                                 <label for="name-topic-kaz">Название темы (казахский язык)</label>
                                 <input type="text" placeholder="Введите название темы" id="name-topic-kaz">
                             </div>
@@ -118,12 +122,12 @@
                             Подзаголовок
                         </h3>
                         <form class="home-content-block__form home-content-block-form">
-                            <div class="home-content-block-form__information">
+                            <div>
                                 <label for="subtitle-rus">Подзаголовок (русский язык)</label>
                                 <input type="text" placeholder="Например промежуток времени, когда происходят события"
                                     id="subtitle-rus">
                             </div>
-                            <div class="home-content-block-form__information">
+                            <div>
                                 <label for="subtitle-kaz">Подзаголовок (казахский язык)</label>
                                 <input type="text" placeholder="Например промежуток времени, когда происходят события"
                                     id="subtitle-kaz">
@@ -135,22 +139,22 @@
                             Абзац
                         </h3>
                         <form class="home-content-block__form home-content-block-form">
-                            <div class="home-content-block-form__information">
+                            <div>
                                 <label for="heading-paragraph-rus">Заголовок для абзаца (на русском)</label>
                                 <input type="text" placeholder="Какой-то заголовок" id="heading-paragraph-rus">
                             </div>
-                            <div class="home-content-block-form__information">
+                            <div>
                                 <label for="heading-paragraph-kaz">Заголовок для абзаца (на казахском)</label>
                                 <input type="text" placeholder="Какой-то заголовок" id="heading-paragraph-kaz">
                             </div>
                         </form>
                         <form class="home-content-block__form home-content-block-form">
-                            <div class="home-content-block-form__information">
+                            <div>
                                 <label for="heading-paragraph-rus">Добавьте описание (на русском)</label>
                                 <input type="text" placeholder="Основной текст на русском" id="
                                 main-text-rus">
                             </div>
-                            <div class="home-content-block-form__information">
+                            <div>
                                 <label for="heading-paragraph-kaz">Добавьте описание (на казахском)</label>
                                 <input type="text" placeholder="Основной текст на казахском" id="main-text-kaz">
                             </div>
@@ -160,16 +164,16 @@
                             <h3 class="home-content-block__header">
                                 Фото
                             </h3>
-                            <form class="home-content-block__form home-content-block-form">
+                            <form class="home-content-block__form home-content-block-form three-columns">
                                 <button class="home-content-block__button button-dark-grey-left">
                                     <img src="../src/img/icons/load.svg" alt="">
                                     Загрузить фото
                                 </button>
-                                <div class="home-content-block-form__information-3">
+                                <div>
                                     <label for="photo-description-rus">Добавьте описание к фото (на русском)</label>
                                     <input type="text" placeholder="Какое-то описание" id="photo-description-rus">
                                 </div>
-                                <div class="home-content-block-form__information-3">
+                                <div>
                                     <label for="photo-description-kaz">Добавьте описание к фото (на казахском)</label>
                                     <input type="text" placeholder="Какое-то описание" id="photo-description-kaz">
                                 </div>
@@ -180,38 +184,110 @@
                             <h3 class="home-content-block__header">
                                 Цитата
                             </h3>
-                            <form class="home-content-block__form home-content-block-form">
+                            <form class="home-content-block__form home-content-block-form three-columns">
                                 <button class="home-content-block__button button-dark-grey-left">
                                     <img src="../src/img/icons/load.svg" alt="">
                                     Загрузить фото
                                 </button>
-                                <div class="home-content-block-form__information-3">
+                                <div>
                                     <label for="quote-description-rus">Добавьте описание (на русском)</label>
                                     <input type="text" placeholder="Какое-то описание" id="quote-description-rus">
                                 </div>
-                                <div class="home-content-block-form__information-3">
+                                <div>
                                     <label for="quote-description-kaz">Добавьте описание (на казахском)</label>
                                     <input type="text" placeholder="Какое-то описание" id="quote-description-kaz">
                                 </div>
                             </form>
                         </div>
-                        <button id="attachPhoto" class="home-content-block__button button-dashed-fixed">
+                        <div class="three-columns">
+                            <button id="attachPhoto" class="home-content-block__button button-dashed">
+                                <img src="../src/img/icons/add-round.svg" alt="">
+                                Привязать фото
+                            </button>
+                        </div>
+                        <div class="three-columns">
+                            <button id="attachQuote" class="home-content-block__button button-dashed">
+                                <img src="../src/img/icons/add-round.svg" alt="">
+                                Привязать цитату
+                            </button>
+                        </div>
+                    </div>
+                    <div class="three-columns">
+                        <button class="home-content__button button-dashed">
                             <img src="../src/img/icons/add-round.svg" alt="">
-                            Привязать фото
-                        </button>
-                        <button id="attachQuote" class="home-content-block__button button-dashed-fixed">
-                            <img src="../src/img/icons/add-round.svg" alt="">
-                            Привязать цитату
+                            Добавить еще абзац
                         </button>
                     </div>
-                    <button class="home-content__button button-dashed-fixed">
-                        <img src="../src/img/icons/add-round.svg" alt="">
-                        Добавить еще абзац
-                    </button>
                     <div class="home-content__block home-content-block">
                         <h3 class="home-content-block__header">
                             Структура страницы
                         </h3>
+                        <div class="home-content-block__structure home-content-block-structure">
+                            <button class="button-structure">
+                                Выбрать это расположение
+                                <img src="../src/img/icons/add-round-white.svg" alt="">
+                            </button>
+                            <div class="home-content-block-structure__chapter home-content-block-structure-chapter">
+                                <div
+                                    class="home-content-block-structure-chapter__information home-content-block-structure-chapter-information">
+                                    <span class="home-content-block-structure-chapter-information__chapter">Глава</span>
+                                    <span class="home-content-block-structure-chapter-information__name">Детство</span>
+                                </div>
+                                <div class="home-content-block-structure-chapter__buttons">
+                                    <button class="home-content-block-structure-chapter__button">
+                                        <img src="../src/img/icons/close.svg" alt="">
+                                    </button>
+                                    <div class="home-content-block-structure-chapter__line"></div>
+                                    <button class="home-content-block-structure-chapter__button">
+                                        <img src="../src/img/icons/context.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                            <button class="button-structure">
+                                Выбрать это расположение
+                                <img src="../src/img/icons/add-round-white.svg" alt="">
+                            </button>
+                            <div class="home-content-block-structure__chapter home-content-block-structure-chapter">
+                                <div
+                                    class="home-content-block-structure-chapter__information home-content-block-structure-chapter-information">
+                                    <span class="home-content-block-structure-chapter-information__chapter">Глава</span>
+                                    <span class="home-content-block-structure-chapter-information__name">Детство</span>
+                                </div>
+                                <div class="home-content-block-structure-chapter__buttons">
+                                    <button class="home-content-block-structure-chapter__button">
+                                        <img src="../src/img/icons/close.svg" alt="">
+                                    </button>
+                                    <div class="home-content-block-structure-chapter__line"></div>
+                                    <button class="home-content-block-structure-chapter__button">
+                                        <img src="../src/img/icons/context.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                            <button class="button-structure">
+                                Выбрать это расположение
+                                <img src="../src/img/icons/add-round-white.svg" alt="">
+                            </button>
+                            <div class="home-content-block-structure__chapter home-content-block-structure-chapter">
+                                <div
+                                    class="home-content-block-structure-chapter__information home-content-block-structure-chapter-information">
+                                    <span class="home-content-block-structure-chapter-information__chapter">Глава</span>
+                                    <span class="home-content-block-structure-chapter-information__name">Детство</span>
+                                </div>
+                                <div class="home-content-block-structure-chapter__buttons">
+                                    <button class="home-content-block-structure-chapter__button">
+                                        <img src="../src/img/icons/close.svg" alt="">
+                                    </button>
+                                    <div class="home-content-block-structure-chapter__line"></div>
+                                    <button class="home-content-block-structure-chapter__button">
+                                        <img src="../src/img/icons/context.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                            <button class="button-structure">
+                                Выбрать это расположение
+                                <img src="../src/img/icons/add-round-white.svg" alt="">
+                            </button>
+                        </div>
                     </div>
                     <div class="home-content__saving home-content-saving">
                         <div class="home-content-saving__buttons home-content-saving-button">
@@ -226,10 +302,12 @@
                         </div>
                         <div class="home-content-saving__line">
                         </div>
-                        <button class="home-content-saving__button button-dashed-fixed">
-                            <img src="../src/img/icons/add-round.svg" alt="">
-                            Добавить главу
-                        </button>
+                        <div class="three-columns">
+                            <button class="home-content-saving__button button-dashed">
+                                <img src="../src/img/icons/add-round.svg" alt="">
+                                Добавить главу
+                            </button>
+                        </div>
                     </div>
                 </div>
             </main>

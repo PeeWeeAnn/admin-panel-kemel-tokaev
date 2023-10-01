@@ -130,6 +130,10 @@
         font-size: 18px;
         font-weight: 500;
     }
+
+    &__active {
+        background: $background-grey;
+    }
 }
 
 .sidebar-button {
@@ -139,4 +143,8 @@
     &__image {
         padding-right: 18px;
     }
+}
+
+.sub-navigation-hidden {
+    display: none;
 }

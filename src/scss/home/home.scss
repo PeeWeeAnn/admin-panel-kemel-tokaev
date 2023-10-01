@@ -15,44 +15,25 @@
 }
 
 .home-content {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 20px;
     padding: 20px;
 }
 
 .home-content-block {
-    display: flex;
+    display: grid;
     width: calc(100% - 20px);
     padding: 20px 10px;
-    flex-direction: column;
     gap: 20px;
     border-radius: 7px;
     background: $background-white;
-
-    &__button {
-        width: 33.3333%;
-    }
 }
 
 .home-content-block-form {
-    display: flex;
+    display: grid;
+    grid-auto-flow: column;
     align-items: end;
     gap: 20px;
-
-    &__information {
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    &__information-3 {
-        width: 33.3333%;
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-    }
 }
 
 .home-content-block-form-wrapper {
@@ -60,14 +41,6 @@
     flex-direction: column;
     gap: 20px;
 }
-
-/* .home-content-block-form-photo {
-    display: none;
-}
-
-.home-content-block-form-quote {
-    display: none;
-} */
 
 .home-content-saving {
     display: flex;
@@ -90,5 +63,39 @@
 
     &__button img {
         padding-left: 8px;
+    }
+}
+
+.home-content-block-structure-chapter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__buttons {
+        display: flex;
+    }
+
+    &__button {
+        padding: 10px;
+    }
+
+    &__line {
+        width: 2px;
+        background: $dark-grey;
+    }
+}
+
+.home-content-block-structure-chapter-information {
+    display: flex;
+    gap: 100px;
+
+    &__chapter {
+        font-weight: 600;
+        font-size: 18px;
+    }
+
+    &__name {
+        font-weight: 400;
+        font-size: 18px;
     }
 }
