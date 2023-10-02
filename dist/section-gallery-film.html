@@ -93,7 +93,7 @@
             <main class="section">
                 <header class="header">
                     <h1 class="header__heading">
-                        Разделы | Творчество
+                        Разделы | Галерея | Фильмы
                     </h1>
                     <div class="header__image">
                         <img src="../src/img/icons/avatar.svg" alt="">
@@ -101,112 +101,76 @@
                 </header>
                 <div class="section__content section-content">
                     <h2 class="section-content__header">
-                        Добавление новой книги
+                        Добавление нового фильма
                     </h2>
                     <div class="section-content__block section-content-block">
-                        <h3 class="section-content-block__header">
-                            Абзац
-                        </h3>
-                        <form class="section-content-block__form section-content-block-form">
-                            <div class="section-content-block-form__information-3">
-                                <label for="book1-section">Выберите раздел</label>
-                                <select name="" id="book1-section">
-                                    <option value="disabled" disabled selected>Выберите из списка</option>
-                                    <option value="law">Право</option>
-                                    <option value="economy">Экономика</option>
-                                </select>
-                            </div>
-                            <div class="section-content-block-form__information-3">
-                                <label for="book1-genre">Жанр</label>
-                                <select name="" id="book1-genre">
-                                    <option value="disabled" disabled selected>Выберите из списка</option>
-                                    <option value="law">Беллетристика</option>
-                                    <option value="economy">Проза</option>
-                                </select>
-                            </div>
-                            <div class="section-content-block-form__information-3">
-                                <label for="book1-year">Введите год написания книги</label>
-                                <select name="" id="book1-year">
-                                    <option value="disabled" disabled selected>Выберите из списка</option>
-                                    <option value="law">2022</option>
-                                    <option value="economy">2021</option>
-                                </select>
-                            </div>
-                        </form>
-                        <form class="section-content-block__form section-content-block-form">
-                            <div class="section-content-block-form__information-3">
-                                <label for="book1-place-writing">Введите место написания книги</label>
-                                <select name="" id="book1-place-writing">
-                                    <option value="disabled" disabled selected>Например: Алматы</option>
-                                    <option value="law">Астана</option>
-                                    <option value="economy">Алматы</option>
-                                </select>
-                            </div>
-                            <div class="section-content-block-form__information-3">
-                                <label for="book1-author">Автор</label>
-                                <input type="text" id="book1-author" disabled placeholder="Кемель Токаев">
-                                <button id="editInput" class="button-edit">
-                                    <img src="../src/img/icons/edit.svg" alt="">
-                                </button>
-                            </div>
-                            <div class="section-content-block-form__information-3">
-                            </div>
-                        </form>
-                        <form class="section-content-block__form section-content-block-form">
-                            <div class="section-content-block-form__information-3">
-                                <label for="book1-name-rus">Введите название книги (на русском)</label>
-                                <input type="text" id="book1-name-rus" placeholder="Название">
-                            </div>
-                            <div class="section-content-block-form__information-3">
-                                <label for="book1-name-kaz">Введите название книги (на казахском)</label>
-                                <input type="text" id="book1-name-kaz" placeholder="Название">
-                            </div>
-                            <div class="section-content-block-form__information-3">
-                            </div>
-                        </form>
-                        <form class="section-content-block__form section-content-block-form">
-                            <div class="section-content-block-form__information-1">
-                                <label for="book1-description-rus">Описание на русском</label>
-                                <input type="text" id="book1-description-rus" placeholder="О чем книга">
-                            </div>
-                        </form>
-                        <form class="section-content-block__form section-content-block-form">
-                            <div class="section-content-block-form__information-1">
-                                <label for="book1-description-kaz">Описание на казахском</label>
-                                <input type="text" id="book1-description-kaz" placeholder="О чем книга">
+                        <form class="section-content-block__form section-content-block-form three-columns">
+                            <div>
+                                <label for="film1-year">Год</label>
+                                <input type="text" id="film1-year" placeholder="Например 1883 г.">
                             </div>
                         </form>
                     </div>
                     <div class="section-content__block section-content-block">
-                        <h3 class="section-content-block__header">
-                            Файлы
-                        </h3>
+                        <h3>Русская версия</h3>
+                        <form class="section-content-block__form section-content-block-form three-columns">
+                            <div>
+                                <label for="film1-title-rus">Название фильма</label>
+                                <input type="text" id="film1-title-rus" placeholder="Введите название">
+                            </div>
+                        </form>
                         <form class="section-content-block__form section-content-block-form">
-                            <button class="section-content-block-form__button button-dashed">
-                                <img src="../src/img/icons/load-dark.svg" alt="">
-                                Загрузить печатную версию
-                            </button>
-                            <button class="section-content-block-form__button button-dashed">
-                                <img src="../src/img/icons/load-dark.svg" alt="">
-                                Загрузить аудиоверсию
-                            </button>
-                            <button class="section-content-block-form__button button-dashed">
-                                <img src="../src/img/icons/load-dark.svg" alt="">
-                                Загрузить обложку
-                            </button>
+                            <div>
+                                <label for="film1-description-rus">Описание</label>
+                                <input type="text" id="film1-description-rus" placeholder="Какое-то описание">
+                            </div>
                         </form>
                     </div>
-                    <button class="section-content__button button-dashed">
-                        <img src="../src/img/icons/add-round.svg" alt="">
-                        Добавить раздел
-                    </button>
-                    <button class="section-content__button button-dashed">
-                        <img src="../src/img/icons/add-round.svg" alt="">
-                        Добавить книгу
-                    </button>
-                    <button class="section-content__button button-grey">
-                        Редактировать добавленные
-                    </button>
+                    <div class="section-content__block section-content-block">
+                        <h3>Казахская версия</h3>
+                        <form class="section-content-block__form section-content-block-form three-columns">
+                            <div>
+                                <label for="film1-title-kaz">Название фильма</label>
+                                <input type="text" id="film1-title-kaz" placeholder="Введите название">
+                            </div>
+                        </form>
+                        <form class="section-content-block__form section-content-block-form">
+                            <div>
+                                <label for="film1-description-kaz">Описание</label>
+                                <input type="text" id="film1-description-kaz" placeholder="Какое-то описание">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="section-content__block section-content-block">
+                        <h3>Файлы</h3>
+                        <div class="three-columns">
+                            <button class="button-dashed">
+                                <img src="../src/img/icons/load-dark.svg" alt="">
+                                Загрузить фильм
+                            </button>
+                            <button class="button-dashed">
+                                <img src="../src/img/icons/load-dark.svg" alt="">
+                                Загрузить обложку фильма
+                            </button>
+                        </div>
+                    </div>
+                    <div class="three-columns">
+                        <button class="button-dashed">
+                            <img src="../src/img/icons/add-round.svg" alt="">
+                            Добавить фильм
+                        </button>
+                    </div>
+                    <div class="three-columns">
+                        <button class="button-grey">
+                            Редактировать добавленные
+                        </button>
+                    </div>
+                    <div class="three-columns">
+                        <button class="button-dark-grey">
+                            <img src="../src/img/icons/add-round-dark.svg" alt="">
+                            Сохранить изменения
+                        </button>
+                    </div>
                 </div>
             </main>
         </div>
