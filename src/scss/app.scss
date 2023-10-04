@@ -7,6 +7,10 @@
 
 @import "./section/section";
 
+@import "./modal/modal";
+
+@import "./preview/preview";
+
 html {
     overflow-x: hidden;
     margin-right: calc(-1 * (100vw - 100%));
@@ -48,6 +52,11 @@ h2 {
 h3 {
     font-size: 16px;
     letter-spacing: 0.08px;
+}
+
+h4 {
+    font-size: 18px;
+    letter-spacing: 0.09px;
 }
 
 p {
@@ -219,6 +228,10 @@ select:checked {
 .button-grey {
     background: $grey;
     color: $text-white;
+
+    img {
+        padding-right: 18px;
+    }
 }
 
 .button-dashed {
