@@ -68,3 +68,35 @@ if (loginButton) {
 		}
 	})
 }
+
+const closePreviewButton = document.querySelector(".button-close-preview")
+
+const previewModal = document.querySelector(".preview")
+
+const previewButtonSectionCreativity = document.getElementById(
+	"previewButtonSectionCreativity",
+)
+const previewButtonSectionWord = document.getElementById(
+	"previewButtonSectionWord",
+)
+const previewButtonGalleryFilm = document.getElementById(
+	"previewButtonGalleryFilm",
+)
+const previewButtonGalleryInterview = document.getElementById(
+	"previewButtonGalleryInterview",
+)
+const previewButtonGalleryPhoto = document.getElementById(
+	"previewButtonGalleryPhoto",
+)
+
+const previewSectionCreativity = document.getElementById(
+	"previewSectionCreativity",
+)
+
+previewButtonSectionCreativity.addEventListener("click", function () {
+	previewSectionCreativity.style.display = "flex"
+})
+
+closePreviewButton.addEventListener("click", function () {
+	previewModal.style.display = "none"
+})

@@ -34,6 +34,10 @@
     grid-auto-flow: column;
     align-items: end;
     gap: 20px;
+
+    &__container {
+        position: relative;
+    }
 }
 
 .home-content-block-form-wrapper {

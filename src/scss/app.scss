@@ -24,6 +24,7 @@ body {
     font-weight: 400;
     line-height: 150%;
     background: $background-grey;
+    overflow: auto;
 }
 
 h1,
@@ -171,6 +172,10 @@ select:checked {
     color: $text-dark-grey;
 }
 
+select:disabled {
+    background: $background-grey;
+}
+
 .wrapper {
     min-height: 100%;
     display: flex;
@@ -264,6 +269,13 @@ select:checked {
     img {
         padding-left: 18px;
     }
+}
+
+.button-close {
+    width: 24px;
+    height: 24px;
+    right: 0;
+    background: transparent;
 }
 
 .header {

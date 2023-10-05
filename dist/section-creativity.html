@@ -16,7 +16,7 @@
 
 <body>
 
-        <section class="section-creativity">
+    <section class="section-creativity">
         <div class="section-wrapper">
             <aside class="sidebar">
                 <div class="sidebar__heading sidebar-heading">
@@ -108,79 +108,106 @@
                             Книга №1
                         </h3>
                         <form class="section-content-block__form section-content-block-form three-columns">
-                            <div>
+                            <div class="section-content-block-form__wrapper">
                                 <label for="book1-section">Выберите раздел</label>
                                 <select name="" id="book1-section">
                                     <option value="disabled" disabled selected>Выберите из списка</option>
                                     <option value="law">Право</option>
                                     <option value="economy">Экономика</option>
                                 </select>
+                                <button id="editInput" class="button-edit">
+                                    <img src="../src/img/icons/edit.svg" alt="">
+                                </button>
                             </div>
-                            <div>
+                            <div class="section-content-block-form__wrapper">
                                 <label for="book1-genre">Жанр</label>
                                 <select name="" id="book1-genre">
                                     <option value="disabled" disabled selected>Выберите из списка</option>
                                     <option value="fiction">Беллетристика</option>
                                     <option value="prose">Проза</option>
                                 </select>
+                                <button id="editInput" class="button-edit">
+                                    <img src="../src/img/icons/edit.svg" alt="">
+                                </button>
                             </div>
-                            <div>
+                            <div class="section-content-block-form__wrapper">
                                 <label for="book1-year">Введите год написания книги</label>
                                 <select name="" id="book1-year">
                                     <option value="disabled" disabled selected>Выберите из списка</option>
                                     <option value="2022">2022</option>
                                     <option value="2021">2021</option>
                                 </select>
+                                <button id="editInput" class="button-edit">
+                                    <img src="../src/img/icons/edit.svg" alt="">
+                                </button>
                             </div>
                         </form>
                         <form class="section-content-block__form section-content-block-form three-columns">
-                            <div>
+                            <div class="section-content-block-form__wrapper">
                                 <label for="book1-place-writing">Введите место написания книги</label>
                                 <select name="" id="book1-place-writing">
                                     <option value="disabled" disabled selected>Например: Алматы</option>
                                     <option value="Astana">Астана</option>
                                     <option value="Almaty">Алматы</option>
                                 </select>
+                                <button id="editInput" class="button-edit">
+                                    <img src="../src/img/icons/edit.svg" alt="">
+                                </button>
                             </div>
-                            <div class="section-content-block-form__information">
+                            <div class="section-content-block-form__wrapper">
                                 <label for="book1-author">Автор</label>
                                 <input type="text" id="book1-author" disabled placeholder="Кемель Токаев">
                                 <button id="editInput" class="button-edit">
                                     <img src="../src/img/icons/edit.svg" alt="">
                                 </button>
                             </div>
-                            <div>
-                                <label for="book1-language-writing">Введите место написания книги</label>
+                            <div class="section-content-block-form__wrapper">
+                                <label for="book1-language-writing">Язык написания</label>
                                 <select name="" id="book1-language-writing">
                                     <option value="disabled" disabled selected>Выберите из списка</option>
                                     <option value="kazakh">Казахский</option>
                                     <option value="russian">Русский</option>
                                     <option value="english">Английский</option>
                                 </select>
+                                <button id="editInput" class="button-edit">
+                                    <img src="../src/img/icons/edit.svg" alt="">
+                                </button>
                             </div>
                         </form>
                         <form class="section-content-block__form section-content-block-form">
-                            <div>
+                            <div class="section-content-block-form__wrapper">
                                 <label for="book1-name-rus">Введите название книги (на русском)</label>
                                 <input type="text" id="book1-name-rus" placeholder="Название">
+                                <button id="editInput" class="button-edit">
+                                    <img src="../src/img/icons/edit.svg" alt="">
+                                </button>
                             </div>
                         </form>
                         <form class="section-content-block__form section-content-block-form">
-                            <div>
+                            <div class="section-content-block-form__wrapper">
                                 <label for="book1-description-rus">Описание (на русском)</label>
                                 <input type="text" id="book1-description-rus" placeholder="О чем книга">
+                                <button id="editInput" class="button-edit">
+                                    <img src="../src/img/icons/edit.svg" alt="">
+                                </button>
                             </div>
                         </form>
                         <form class="section-content-block__form section-content-block-form">
-                            <div>
+                            <div class="section-content-block-form__wrapper">
                                 <label for="book1-name-kaz">Введите название книги (на казахском)</label>
                                 <input type="text" id="book1-name-kaz" placeholder="Название">
+                                <button id="editInput" class="button-edit">
+                                    <img src="../src/img/icons/edit.svg" alt="">
+                                </button>
                             </div>
                         </form>
                         <form class="section-content-block__form section-content-block-form">
-                            <div>
+                            <div class="section-content-block-form__wrapper">
                                 <label for="book1-description-kaz">Описание на казахском</label>
                                 <input type="text" id="book1-description-kaz" placeholder="О чем книга">
+                                <button id="editInput" class="button-edit">
+                                    <img src="../src/img/icons/edit.svg" alt="">
+                                </button>
                             </div>
                         </form>
                     </div>
@@ -190,19 +217,21 @@
                         </h3>
                         <form class="section-content-block__form section-content-block-form three-columns">
                             <div>
-                                <button class="section-content-block-form__button button-dashed">
+                                <button id="book1-printed-version"
+                                    class="section-content-block-form__button button-dashed">
                                     <img src="../src/img/icons/load-dark.svg" alt="">
                                     Загрузить печатную версию
                                 </button>
                             </div>
                             <div>
-                                <button class="section-content-block-form__button button-dashed">
+                                <button id="book1-audio-version"
+                                    class="section-content-block-form__button button-dashed">
                                     <img src="../src/img/icons/load-dark.svg" alt="">
                                     Загрузить аудиоверсию
                                 </button>
                             </div>
                             <div>
-                                <button class="section-content-block-form__button button-dashed">
+                                <button id="book1-cover" class="section-content-block-form__button button-dashed">
                                     <img src="../src/img/icons/load-dark.svg" alt="">
                                     Загрузить обложку
                                 </button>
@@ -215,13 +244,19 @@
                     </h2>
                     <div class="section-content__block section-content-block">
                         <form class="section-content-block__form section-content-block-form three-columns">
-                            <div>
+                            <div class="section-content-block-form__wrapper">
                                 <label for="book1-name-chapter-rus">Введите название раздела (на русском)</label>
                                 <input type="text" id="book1-name-chapter-rus" placeholder="Например “ Сборники”">
+                                <button id="editInput" class="button-edit">
+                                    <img src="../src/img/icons/edit.svg" alt="">
+                                </button>
                             </div>
-                            <div>
+                            <div class="section-content-block-form__wrapper">
                                 <label for="book1-name-chapter-kaz">Введите название раздела (на казахском)</label>
                                 <input type="text" id="book1-name-chapter-kaz" placeholder="Например “ Сборники”">
+                                <button id="editInput" class="button-edit">
+                                    <img src="../src/img/icons/edit.svg" alt="">
+                                </button>
                             </div>
                         </form>
                         <div class="three-columns">
@@ -250,7 +285,8 @@
                         </button>
                     </div>
                     <div class="three-columns">
-                        <button class="home-content-saving-button__button button-grey">
+                        <button id="previewButtonSectionCreativity"
+                            class="home-content-saving-button__button button-grey">
                             <img src="../src/img/icons/view-white.svg" alt="">
                             Предпросмотр
                         </button>
@@ -264,16 +300,23 @@
         </div>
     </section>
 
-    <!-- <section id="previewSectionCreativity" class="preview preview-section-creativity">
+    <section id="previewSectionCreativity" class="preview preview-section-creativity">
         <div class="preview-wrapper">
             <div class="preview__close">
-                <button class="button-close">
+                <button class="button-close button-close-preview">
                     <img src="../src/img/icons/close.svg" alt="">
                 </button>
             </div>
             <div class="preview__version preview-version">
                 <span class="preview-version__text">Версии:</span>
-                <div class="preview-version__switch"></div>
+                <div class="preview-version__switch preview-version-switch">
+                    <span class="preview-version-switch__text">Ru</span>
+                    <label class="switch">
+                        <input class="switch__input" id="languageSwitch" type="checkbox">
+                        <span class="switch__slider"></span>
+                    </label>
+                    <span class="preview-version-switch__text">Kz</span>
+                </div>
             </div>
             <div class="preview__section">
                 <label for="preview-section-creativity-section">Выберите раздел</label>
@@ -293,7 +336,7 @@
                 </div>
                 <div class="preview-selected-section__book">
                     <label for="preview-selected-section-book">Выберите книгу</label>
-                    <select id="">
+                    <select id="preview-selected-section-book">
                         <option value="disabled" disabled selected>Выберите из списка</option>
                         <option value="">Книга №1 Война мои воспоминания</option>
                         <option value="">Книга №2 Война мои воспоминания</option>
@@ -301,17 +344,105 @@
                     </select>
                 </div>
             </div>
-            <div class="">
-                <div class="">
+            <div class="preview__information preview-information">
+                <div class="preview-information__heading">
                     <h4>Книга №1 Война мои воспомнинания</h4>
-                    <button>
+                    <button class="button-close">
                         <img src="../src/img/icons/close.svg" alt="">
                     </button>
                 </div>
-                <form action="">
-
+                <form class="preview-information__form preview-information-form" action="">
+                    <div class="preview-information-form__wrapper">
+                        <label for="book1-name-rus">Название книги</label>
+                        <input type="text" placeholder="Название" id="book1-name-rus">
+                        <button id="editInput" class="button-edit">
+                            <img src="../src/img/icons/edit.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="preview-information-form__wrapper">
+                        <label for="book1-year">Введите год написания книги</label>
+                        <select name="" id="book1-year">
+                            <option value="disabled" disabled selected>Выберите из списка</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                        </select>
+                        <button id="editInput" class="button-edit">
+                            <img src="../src/img/icons/edit.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="preview-information-form__wrapper">
+                        <label for="book1-place-writing">Введите место написания книги</label>
+                        <select name="" id="book1-place-writing">
+                            <option value="disabled" disabled selected>Например: Алматы</option>
+                            <option value="Astana">Астана</option>
+                            <option value="Almaty">Алматы</option>
+                        </select>
+                        <button id="editInput" class="button-edit">
+                            <img src="../src/img/icons/edit.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="preview-information-form__wrapper">
+                        <label for="book1-genre">Жанр</label>
+                        <select name="" id="book1-genre">
+                            <option value="disabled" disabled selected>Выберите из списка</option>
+                            <option value="fiction">Беллетристика</option>
+                            <option value="prose">Проза</option>
+                        </select>
+                        <button id="editInput" class="button-edit">
+                            <img src="../src/img/icons/edit.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="preview-information-form__wrapper">
+                        <label for="book1-language-writing">Язык написания</label>
+                        <select name="" id="book1-language-writing">
+                            <option value="disabled" disabled selected>Выберите из списка</option>
+                            <option value="kazakh">Казахский</option>
+                            <option value="russian">Русский</option>
+                            <option value="english">Английский</option>
+                        </select>
+                        <button id="editInput" class="button-edit">
+                            <img src="../src/img/icons/edit.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="preview-information-form__wrapper">
+                        <label for="book1-cover">Обложка</label>
+                        <button id="book1-cover" class="button-dashed">
+                            <img src="../src/img/icons/load-dark.svg" alt="">
+                            Загрузить обложку
+                        </button>
+                        <button id="editInput" class="button-edit">
+                            <img src="../src/img/icons/edit.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="preview-information-form__wrapper">
+                        <label for="book1-audio-version">Аудиоверсия</label>
+                        <button id="book1-audio-version" class="button-dashed">
+                            <img src="../src/img/icons/load-dark.svg" alt="">
+                            Загрузить аудиоверсию
+                        </button>
+                        <button id="editInput" class="button-edit">
+                            <img src="../src/img/icons/edit.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="preview-information-form__wrapper">
+                        <label for="book1-printed-version">Печатная версия</label>
+                        <button id="book1-printed-version" class="button-dashed">
+                            <img src="../src/img/icons/load-dark.svg" alt="">
+                            Загрузить печатную версию
+                        </button>
+                        <button id="editInput" class="button-edit">
+                            <img src="../src/img/icons/edit.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="preview-information-form__wrapper">
+                        <label for="book1-description-rus">Описание</label>
+                        <input type="text" id="book1-description-rus" placeholder="О чем книга">
+                        <button id="editInput" class="button-edit">
+                            <img src="../src/img/icons/edit.svg" alt="">
+                        </button>
+                    </div>
                 </form>
-                <div class="">
+                <div class="preview-information__button">
                     <button class="button-dark-grey">
                         <img src="../src/img/icons/add-round-dark.svg" alt="">
                         Сохранить изменения
@@ -319,7 +450,7 @@
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
 
     <script src="bundle.js"></script>
 </body>
