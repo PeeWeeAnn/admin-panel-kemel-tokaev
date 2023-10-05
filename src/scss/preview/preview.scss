@@ -3,6 +3,7 @@
 .preview {
     display: none;
     width: calc(100% - 340px);
+    height: 100%;
     align-items: center;
     justify-content: center;
     position: fixed;
@@ -10,12 +11,17 @@
     right: 0;
     background: rgba(66, 66, 66, 0.5);
     z-index: 1;
-    padding: 60px 0;
     overflow: hidden;
 
     &__close {
         display: flex;
         justify-content: flex-end;
+    }
+
+    &__line {
+        height: 1px;
+        opacity: 0.5;
+        background: $dark-grey;
     }
 }
 
@@ -68,12 +74,39 @@
     }
 }
 
+.preview-information-photo {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    &__item img {
+        width: 245px;
+        height: 140px;
+        border-radius: 4px;
+        object-fit: cover;
+    }
+}
+
 .preview-information-form {
+    width: 100%;
     display: grid;
     gap: 10px;
 
     &__wrapper {
         position: relative;
+    }
+}
+
+.preview-section-photo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+
+    &__item img {
+        width: 110px;
+        height: 105px;
+        border-radius: 4px;
     }
 }
 

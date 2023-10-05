@@ -92,11 +92,106 @@ const previewButtonGalleryPhoto = document.getElementById(
 const previewSectionCreativity = document.getElementById(
 	"previewSectionCreativity",
 )
+const previewSectionWord = document.getElementById("previewSectionWord")
+const previewGalleryPhoto = document.getElementById("previewGalleryPhoto")
+const previewGalleryInterview = document.getElementById(
+	"previewGalleryInterview",
+)
+const previewGalleryFilm = document.getElementById("previewGalleryFilm")
 
-previewButtonSectionCreativity.addEventListener("click", function () {
-	previewSectionCreativity.style.display = "flex"
-})
+if (previewButtonSectionCreativity) {
+	previewButtonSectionCreativity.addEventListener("click", function () {
+		previewSectionCreativity.style.display = "flex"
+	})
+}
 
-closePreviewButton.addEventListener("click", function () {
-	previewModal.style.display = "none"
-})
+if (previewButtonSectionWord) {
+	previewButtonSectionWord.addEventListener("click", function () {
+		previewSectionWord.style.display = "flex"
+	})
+}
+
+if (previewButtonGalleryPhoto) {
+	previewButtonGalleryPhoto.addEventListener("click", function () {
+		previewGalleryPhoto.style.display = "flex"
+	})
+}
+
+if (previewButtonGalleryInterview) {
+	previewButtonGalleryInterview.addEventListener("click", function () {
+		previewGalleryInterview.style.display = "flex"
+	})
+}
+
+if (previewButtonGalleryFilm) {
+	previewButtonGalleryFilm.addEventListener("click", function () {
+		previewGalleryFilm.style.display = "flex"
+	})
+}
+
+if (closePreviewButton) {
+	closePreviewButton.addEventListener("click", function () {
+		previewModal.style.display = "none"
+	})
+}
+
+// Редактирование и сохранение изменений VVV
+
+const editButtons = document.querySelectorAll(".button-edit")
+
+const toggleEdit = (e) => {
+	const target = e.target
+	const btn = target.parentElement
+
+	const editableForm = btn.parentElement.children[1]
+
+	if (editableForm.disabled) {
+		editableForm.disabled = !editableForm.disabled
+	}
+
+	initEditButtons()
+}
+
+const onEditButtonClick = (e) => {
+	e.preventDefault()
+	toggleEdit(e)
+}
+
+const initEditButtons = () => {
+	const saveAllButton = document.querySelector(".save-all")
+
+	if (editButtons.length) {
+		editButtons.forEach((btn) => {
+			const editableForm = btn.parentElement.children[1]
+
+			if (!editableForm.disabled) {
+				btn.style.display = "none"
+			} else {
+				btn.style.display = "block"
+			}
+
+			btn.addEventListener("click", onEditButtonClick)
+		})
+
+		if (saveAllButton) {
+			saveAllButton.addEventListener("click", () => {
+				editButtons.forEach((btn) => {
+					const editableForm = btn.parentElement.children[1]
+
+					if (!editableForm.disabled) {
+						editableForm.disabled = !editableForm.disabled
+					}
+					initEditButtons()
+				})
+			})
+		}
+	}
+}
+
+const onLoad = () => {
+	initEditButtons()
+}
+
+onLoad()
+
+// Загрузка файлов с прогресс-баром VVV

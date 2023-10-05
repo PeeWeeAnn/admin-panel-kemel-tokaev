@@ -195,6 +195,82 @@
         </div>
     </section>
 
+    <section id="previewSectionWord" class="preview preview-section-word">
+        <div class="preview-wrapper">
+            <div class="preview__close">
+                <button class="button-close button-close-preview">
+                    <img src="../src/img/icons/close.svg" alt="">
+                </button>
+            </div>
+            <div class="preview__version preview-version">
+                <span class="preview-version__text">Версии:</span>
+                <div class="preview-version__switch preview-version-switch">
+                    <span class="preview-version-switch__text">Ru</span>
+                    <label class="switch">
+                        <input class="switch__input" id="languageSwitch" type="checkbox">
+                        <span class="switch__slider"></span>
+                    </label>
+                    <span class="preview-version-switch__text">Kz</span>
+                </div>
+            </div>
+            <div class="preview__section">
+                <label for="preview-section-word-section">Выберите раздел</label>
+                <select id="preview-section-word-section">
+                    <option value="disabled" disabled selected>Выберите из списка</option>
+                    <option value="">Повести</option>
+                    <option value="">Повести</option>
+                    <option value="">Повести</option>
+                </select>
+            </div>
+            <div class="preview__author">
+                <label for="preview-section-author">Выберите Автора</label>
+                <select id="preview-section-author">
+                    <option value="disabled" disabled selected>Иванов Иван Иванович</option>
+                    <option value="">Иванов Иван Иванович</option>
+                    <option value="">Иванов Иван Иванович</option>
+                    <option value="">Иванов Иван Иванович</option>
+                </select>
+            </div>
+            <div class="preview__information preview-information">
+                <div class="preview-information__heading">
+                    <h4>Иванов Иван Иванович</h4>
+                    <button class="button-close">
+                        <img src="../src/img/icons/close.svg" alt="">
+                    </button>
+                </div>
+                <form class="preview-information__form preview-information-form" action="">
+                    <div class="preview-information-form__wrapper">
+                        <label for="article1-name-rus">ФИО</label>
+                        <input type="text" placeholder="Название" id="article1-name-rus">
+                        <button id="editInput" class="button-edit">
+                            <img src="../src/img/icons/edit.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="preview-information-form__wrapper">
+                        <label for="article1-title-rus">Заголовок статьи</label>
+                        <input type="text" placeholder="Название" id="article1-title-rus">
+                        <button id="editInput" class="button-edit">
+                            <img src="../src/img/icons/edit.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="preview-information-form__wrapper">
+                        <label for="article1-description-rus">Описание</label>
+                        <input type="text" placeholder="Название" id="article1-description-rus">
+                        <button id="editInput" class="button-edit">
+                            <img src="../src/img/icons/edit.svg" alt="">
+                        </button>
+                    </div>
+                </form>
+                <div class="preview-information__button">
+                    <button class="button-dark-grey">
+                        <img src="../src/img/icons/add-round-dark.svg" alt="">
+                        Сохранить изменения
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <script src="bundle.js"></script>
 </body>
 
