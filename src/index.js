@@ -88,6 +88,7 @@ const previewButtonGalleryInterview = document.getElementById(
 const previewButtonGalleryPhoto = document.getElementById(
 	"previewButtonGalleryPhoto",
 )
+const previewButtonHome = document.getElementById("previewButtonHome")
 
 const previewSectionCreativity = document.getElementById(
 	"previewSectionCreativity",
@@ -98,6 +99,7 @@ const previewGalleryInterview = document.getElementById(
 	"previewGalleryInterview",
 )
 const previewGalleryFilm = document.getElementById("previewGalleryFilm")
+const previewHome = document.getElementById("previewHome")
 
 if (previewButtonSectionCreativity) {
 	previewButtonSectionCreativity.addEventListener("click", function () {
@@ -126,6 +128,12 @@ if (previewButtonGalleryInterview) {
 if (previewButtonGalleryFilm) {
 	previewButtonGalleryFilm.addEventListener("click", function () {
 		previewGalleryFilm.style.display = "flex"
+	})
+}
+
+if (previewButtonHome) {
+	previewButtonHome.addEventListener("click", function () {
+		previewHome.style.display = "flex"
 	})
 }
 
@@ -158,7 +166,7 @@ const onEditButtonClick = (e) => {
 }
 
 const initEditButtons = () => {
-	const saveAllButton = document.querySelector(".save-all")
+	const saveAllButtons = document.querySelectorAll(".save-all")
 
 	if (editButtons.length) {
 		editButtons.forEach((btn) => {
@@ -173,15 +181,22 @@ const initEditButtons = () => {
 			btn.addEventListener("click", onEditButtonClick)
 		})
 
-		if (saveAllButton) {
-			saveAllButton.addEventListener("click", () => {
-				editButtons.forEach((btn) => {
-					const editableForm = btn.parentElement.children[1]
+		if (saveAllButtons) {
+			saveAllButtons.forEach((btn) => {
+				btn.addEventListener("click", () => {
+					editButtons.forEach((btn) => {
+						const editableForm = btn.parentElement.children[1]
 
-					if (!editableForm.disabled) {
-						editableForm.disabled = !editableForm.disabled
-					}
-					initEditButtons()
+						if (!editableForm.disabled) {
+							editableForm.disabled = !editableForm.disabled
+						}
+
+						if (!editableForm.disabled) {
+							btn.style.display = "none"
+						} else {
+							btn.style.display = "block"
+						}
+					})
 				})
 			})
 		}
@@ -195,3 +210,43 @@ const onLoad = () => {
 onLoad()
 
 // Загрузка файлов с прогресс-баром VVV
+
+// Вызов модалок
+
+const modals = document.querySelectorAll(".modal")
+const buttonsCloseModal = document.querySelectorAll(".button-close-modal")
+
+const buttonDownloadPhotos = document.querySelectorAll(".button-download-photo")
+const buttonDownloadFiles = document.querySelectorAll(".button-download-file")
+
+const modalPhoto = document.getElementById("modalPhoto")
+const modalFile = document.getElementById("modalFile")
+
+if (buttonDownloadPhotos) {
+	buttonDownloadPhotos.forEach((btn) => {
+		btn.addEventListener("click", function (e) {
+			e.preventDefault()
+			modalPhoto.style.display = "flex"
+		})
+	})
+}
+
+if (buttonDownloadFiles) {
+	buttonDownloadFiles.forEach((btn) => {
+		btn.addEventListener("click", function (e) {
+			e.preventDefault()
+			modalFile.style.display = "flex"
+		})
+	})
+}
+
+if (buttonsCloseModal) {
+	buttonsCloseModal.forEach((btn) => {
+		btn.addEventListener("click", function (e) {
+			e.preventDefault()
+			modals.forEach((modal) => {
+				modal.style.display = "none"
+			})
+		})
+	})
+}

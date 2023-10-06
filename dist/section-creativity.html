@@ -218,20 +218,21 @@
                         <form class="section-content-block__form section-content-block-form three-columns">
                             <div>
                                 <button id="book1-printed-version"
-                                    class="section-content-block-form__button button-dashed">
+                                    class="section-content-block-form__button button-dashed button-download-file">
                                     <img src="../src/img/icons/load-dark.svg" alt="">
                                     Загрузить печатную версию
                                 </button>
                             </div>
                             <div>
                                 <button id="book1-audio-version"
-                                    class="section-content-block-form__button button-dashed">
+                                    class="section-content-block-form__button button-dashed button-download-file">
                                     <img src="../src/img/icons/load-dark.svg" alt="">
                                     Загрузить аудиоверсию
                                 </button>
                             </div>
                             <div>
-                                <button id="book1-cover" class="section-content-block-form__button button-dashed">
+                                <button id="book1-cover"
+                                    class="section-content-block-form__button button-dashed button-download-photo">
                                     <img src="../src/img/icons/load-dark.svg" alt="">
                                     Загрузить обложку
                                 </button>
@@ -406,7 +407,7 @@
                     </div>
                     <div class="preview-information-form__wrapper">
                         <label for="book1-cover">Обложка</label>
-                        <button id="book1-cover" class="button-dashed">
+                        <button id="book1-cover" class="button-dashed button-download-photo">
                             <img src="../src/img/icons/load-dark.svg" alt="">
                             Загрузить обложку
                         </button>
@@ -416,7 +417,7 @@
                     </div>
                     <div class="preview-information-form__wrapper">
                         <label for="book1-audio-version">Аудиоверсия</label>
-                        <button id="book1-audio-version" class="button-dashed">
+                        <button id="book1-audio-version" class="button-dashed button-download-file">
                             <img src="../src/img/icons/load-dark.svg" alt="">
                             Загрузить аудиоверсию
                         </button>
@@ -426,7 +427,7 @@
                     </div>
                     <div class="preview-information-form__wrapper">
                         <label for="book1-printed-version">Печатная версия</label>
-                        <button id="book1-printed-version" class="button-dashed">
+                        <button id="book1-printed-version" class="button-dashed button-download-file">
                             <img src="../src/img/icons/load-dark.svg" alt="">
                             Загрузить печатную версию
                         </button>
@@ -443,11 +444,107 @@
                     </div>
                 </form>
                 <div class="preview-information__button">
-                    <button class="button-dark-grey">
+                    <button class="button-dark-grey save-all">
                         <img src="../src/img/icons/add-round-dark.svg" alt="">
                         Сохранить изменения
                     </button>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="modalFile" class="modal modal-file">
+        <div class="modal-wrapper">
+            <div class="modal__close">
+                <button class="button-close button-close-modal">
+                    <img src="../src/img/icons/close.svg" alt="">
+                </button>
+            </div>
+            <div class="modal__information modal-information">
+                <div class="modal-information__image">
+                    <img src="../src/img/icons/modal-download.svg" alt="">
+                </div>
+                <span class="modal-information__text">
+                    Загрузите файл или претащите в эту область
+                </span>
+                <div class="">
+                    <button class="modal-information__button button-dark-grey">
+                        <img src="../src/img/icons/load.svg" alt="">
+                        Загрузить файл
+                    </button>
+                    <input type="file">
+                </div>
+            </div>
+            <div class="modal__drag-drop modal-drag-drop">
+                <span class="modal-drag-drop__text">
+                    Перетащите файлы в эту область или нажмите для выбора. Файлы изображений до 5 Мб (JPG, PNG, GIF).
+                </span>
+            </div>
+            <div class="modal__loading modal-loading">
+                <div class="modal-loading__image">
+                    <img src="../src/img/icons/modal-file.svg" alt="">
+                </div>
+                <div class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="182" height="8" viewBox="0 0 182 8" fill="none">
+                        <rect y="0.5" width="182" height="7" rx="3.5" fill="#D9D9D9" />
+                        <rect y="0.5" width="77" height="7" rx="3.5" fill="#424242" />
+                    </svg>
+                </div>
+                <span class="modal-loading__text">
+                    Загружаем
+                </span>
+            </div>
+            <div class="modal__loaded modal-loaded">
+                <div class="modal-loaded__image">
+                    <img src="../src/img/icons/modal-uploaded.svg" alt="">
+                </div>
+                <span class="modal-loaded__text">
+                    Загружено!
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <section id="modalPhoto" class="modal modal-photo">
+        <div class="modal-wrapper">
+            <div class="modal__close">
+                <button class="button-close button-close-modal">
+                    <img src="../src/img/icons/close.svg" alt="">
+                </button>
+            </div>
+            <div class="modal__information modal-information">
+                <div class="modal-information__image">
+                    <img src="../src/img/icons/modal-download.svg" alt="">
+                </div>
+                <span class="modal-information__text">
+                    Загрузите фото или претащите в эту область
+                </span>
+                <div class="">
+                    <button class="modal-information__button button-dark-grey">
+                        <img src="../src/img/icons/load.svg" alt="">
+                        Загрузить фото
+                    </button>
+                    <input type="file">
+                </div>
+            </div>
+            <div class="modal__drag-drop modal-drag-drop">
+                <span class="modal-drag-drop__text">
+                    Перетащите файлы в эту область или нажмите для выбора. Файлы изображений до 5 Мб (JPG, PNG, GIF).
+                </span>
+            </div>
+            <div class="modal__loading modal-loading">
+                <div class="modal-loading__image">
+                    <img src="../src/img/icons/modal-photo.svg" alt="">
+                </div>
+                <div class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="182" height="8" viewBox="0 0 182 8" fill="none">
+                        <rect y="0.5" width="182" height="7" rx="3.5" fill="#D9D9D9" />
+                        <rect y="0.5" width="77" height="7" rx="3.5" fill="#424242" />
+                    </svg>
+                </div>
+                <span class="modal-loading__text">
+                    Загружаем
+                </span>
             </div>
         </div>
     </section>

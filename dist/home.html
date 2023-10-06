@@ -189,7 +189,7 @@
                                 Фото
                             </h3>
                             <form class="home-content-block__form home-content-block-form three-columns">
-                                <button class="home-content-block__button button-dark-grey-left">
+                                <button class="home-content-block__button button-dark-grey-left button-download-photo">
                                     <img src="../src/img/icons/load.svg" alt="">
                                     Загрузить фото
                                 </button>
@@ -215,7 +215,7 @@
                                 Цитата
                             </h3>
                             <form class="home-content-block__form home-content-block-form three-columns">
-                                <button class="home-content-block__button button-dark-grey-left">
+                                <button class="home-content-block__button button-dark-grey-left button-download-photo">
                                     <img src="../src/img/icons/load.svg" alt="">
                                     Загрузить фото
                                 </button>
@@ -327,11 +327,11 @@
                     </div>
                     <div class="home-content__saving home-content-saving">
                         <div class="home-content-saving__buttons home-content-saving-button three-columns">
-                            <button class="home-content-saving-button__button button-grey">
+                            <button id="previewButtonHome" class="home-content-saving-button__button button-grey">
                                 <img src="../src/img/icons/view-white.svg" alt="">
                                 Предпросмотр
                             </button>
-                            <button class="home-content-saving-button__button button-dark-grey">
+                            <button class="home-content-saving-button__button button-dark-grey save-all">
                                 <img src="../src/img/icons/add-round-dark.svg" alt="">
                                 Сохранить изменения
                             </button>
@@ -351,7 +351,157 @@
     </section>
 
     <section id="previewHome" class="preview preview-home">
+        <div class="preview-wrapper">
+            <div class="preview__close">
+                <button class="button-close button-close-preview">
+                    <img src="../src/img/icons/close.svg" alt="">
+                </button>
+            </div>
+            <div class="preview__version preview-version">
+                <span class="preview-version__text">Версии:</span>
+                <div class="preview-version__switch preview-version-switch">
+                    <span class="preview-version-switch__text">Ru</span>
+                    <label class="switch">
+                        <input class="switch__input" id="languageSwitch" type="checkbox">
+                        <span class="switch__slider"></span>
+                    </label>
+                    <span class="preview-version-switch__text">Kz</span>
+                </div>
+            </div>
+            <div class="preview__section">
+                <label for="preview-section-creativity-section">Выберите главу</label>
+                <select id="preview-section-creativity-section">
+                    <option value="disabled" disabled selected>Выберите из списка</option>
+                    <option value="">Глава</option>
+                    <option value="">Глава</option>
+                    <option value="">Глава</option>
+                </select>
+            </div>
+            <div class="preview__information preview-information">
+                <div class="preview-information__heading">
+                    <h4>Глава №1</h4>
+                    <button class="button-close">
+                        <img src="../src/img/icons/close.svg" alt="">
+                    </button>
+                </div>
+                <form class="preview-information__form preview-information-form" action="">
+                    <div class="preview-information-form__wrapper">
+                        <label for="name-topic-rus">Название темы</label>
+                        <input type="text" placeholder="Введите название темы" id="name-topic-rus">
+                        <button id="editInput" class="button-edit">
+                            <img src="../src/img/icons/edit.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="preview-information-form__wrapper">
+                        <label for="subtitle-rus">Подзаголовок</label>
+                        <input type="text" placeholder="Например промежуток времени, когда происходят события"
+                            id="subtitle-rus">
+                        <button id="editInput" class="button-edit">
+                            <img src="../src/img/icons/edit.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="preview-information-form__wrapper">
+                        <label for="heading-paragraph-rus">Заголовок для абзаца</label>
+                        <input type="text" placeholder="Какой-то заголовок" id="heading-paragraph-rus">
+                        <button id="editInput" class="button-edit">
+                            <img src="../src/img/icons/edit.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="preview-information-form__wrapper">
+                        <label for="heading-paragraph-rus">Описание</label>
+                        <input type="text" placeholder="Основной текст на русском" id="
+                        main-text-rus">
+                        <button id="editInput" class="button-edit">
+                            <img src="../src/img/icons/edit.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="preview-information-form__wrapper">
+                        <label for="book1-language-writing">Фото</label>
+                        <button class="home-content-block__button button-dark-grey-left button-download-photo">
+                            <img src="../src/img/icons/load.svg" alt="">
+                            Загрузить фото
+                        </button>
+                        <button id="editInput" class="button-edit">
+                            <img src="../src/img/icons/edit.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="preview-information-form__wrapper">
+                        <label for="photo-description-rus">Описание к фото</label>
+                        <input type="text" placeholder="Какое-то описание" id="photo-description-rus">
+                        <button id="editInput" class="button-edit">
+                            <img src="../src/img/icons/edit.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="preview-information-form__wrapper">
+                        <label for="book1-audio-version">Цитата</label>
+                        <button class="home-content-block__button button-dark-grey-left button-download-photo">
+                            <img src="../src/img/icons/load.svg" alt="">
+                            Загрузить фото
+                        </button>
+                        <button id="editInput" class="button-edit">
+                            <img src="../src/img/icons/edit.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="preview-information-form__wrapper">
+                        <label for="quote-description-rus">Описание к цитате</label>
+                        <input type="text" placeholder="Какое-то описание" id="quote-description-rus">
+                        <button id="editInput" class="button-edit">
+                            <img src="../src/img/icons/edit.svg" alt="">
+                        </button>
+                    </div>
+                </form>
+                <div class="preview-information__button">
+                    <button class="button-dark-grey save-all">
+                        <img src="../src/img/icons/add-round-dark.svg" alt="">
+                        Сохранить изменения
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section id="modalPhoto" class="modal modal-photo">
+        <div class="modal-wrapper">
+            <div class="modal__close">
+                <button class="button-close button-close-modal">
+                    <img src="../src/img/icons/close.svg" alt="">
+                </button>
+            </div>
+            <div class="modal__information modal-information">
+                <div class="modal-information__image">
+                    <img src="../src/img/icons/modal-download.svg" alt="">
+                </div>
+                <span class="modal-information__text">
+                    Загрузите фото или претащите в эту область
+                </span>
+                <div class="">
+                    <button class="modal-information__button button-dark-grey">
+                        <img src="../src/img/icons/load.svg" alt="">
+                        Загрузить фото
+                    </button>
+                    <input type="file">
+                </div>
+            </div>
+            <div class="modal__drag-drop modal-drag-drop">
+                <span class="modal-drag-drop__text">
+                    Перетащите файлы в эту область или нажмите для выбора. Файлы изображений до 5 Мб (JPG, PNG, GIF).
+                </span>
+            </div>
+            <div class="modal__loading modal-loading">
+                <div class="modal-loading__image">
+                    <img src="../src/img/icons/modal-photo.svg" alt="">
+                </div>
+                <div class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="182" height="8" viewBox="0 0 182 8" fill="none">
+                        <rect y="0.5" width="182" height="7" rx="3.5" fill="#D9D9D9" />
+                        <rect y="0.5" width="77" height="7" rx="3.5" fill="#424242" />
+                    </svg>
+                </div>
+                <span class="modal-loading__text">
+                    Загружаем
+                </span>
+            </div>
+        </div>
     </section>
 
     <script src="bundle.js"></script>
