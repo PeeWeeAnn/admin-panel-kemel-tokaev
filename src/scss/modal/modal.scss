@@ -39,7 +39,21 @@
     &__image {
         margin: 0 auto;
     }
+
+    .upload-photo-wrapper {
+        position: relative;
+    
+        button {
+            position: absolute;
+        }
+    
+        input {
+            position: absolute;
+            opacity: 0;
+        }
+    }
 }
+
 
 .modal-drag-drop {
     display: none;
@@ -69,6 +83,42 @@
     &__text {
         font-size: 18px;
     }
+
+    &__progress-bar {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        justify-content: center;
+        position: relative;
+    }
+}
+
+.modal-loading-progress-bar {
+    &__empty {
+        position: absolute;
+        width: 182px;
+        height: 7px;
+        background: #D9D9D9;
+        border-radius: 3.5px;
+        z-index: 9;
+    }
+
+    &__filled {
+        position: absolute;
+        left: -91px;
+        width: calc(182px * 0.01);
+        height: 7px;
+        background: #424242;
+        border-radius: 3.5px;
+        z-index: 10;
+
+        transition: width 1s ease-in-out;
+
+        &.finished {
+            width: 182px;
+        }
+    }
 }
 
 .modal-loaded {
@@ -96,6 +146,10 @@
         align-items: center;
         justify-content: center;
         width: 450px;
+
+        img {
+            width: 100%;
+        }
     }
 
     &__button {
