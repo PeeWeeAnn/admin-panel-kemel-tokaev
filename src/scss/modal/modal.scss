@@ -19,6 +19,15 @@
         height: 25px;
         width: 100%;
     }
+
+    &__buttons {
+        display: flex;
+        gap: 20px;
+    }
+
+    &__header {
+        text-align: center;
+    }
 }
 
 .modal-wrapper {
@@ -42,18 +51,17 @@
 
     .upload-photo-wrapper {
         position: relative;
-    
+
         button {
             position: absolute;
         }
-    
+
         input {
             position: absolute;
             opacity: 0;
         }
     }
 }
-
 
 .modal-drag-drop {
     display: none;
@@ -99,7 +107,7 @@
         position: absolute;
         width: 182px;
         height: 7px;
-        background: #D9D9D9;
+        background: #d9d9d9;
         border-radius: 3.5px;
         z-index: 9;
     }
