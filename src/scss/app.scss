@@ -302,3 +302,31 @@ select:disabled {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
+
+.dark-cover {
+    position: absolute;
+    top: 0;
+    width: 110px;
+    height: 105px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    z-index: 10;
+    opacity: 0;
+    background: rgba(128, 128, 128, 0.5);
+
+    transition: 0.2s;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    button {
+        transition: 0.2s;
+        
+        &:hover {
+            background: red;
+        }   
+    }
+}

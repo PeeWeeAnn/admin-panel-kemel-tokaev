@@ -237,6 +237,7 @@ if (buttonsCloseModal.length) {
 }
 
 const photoUploaders = document.querySelectorAll('.upload-photo-wrapper > input')
+const fileUploaders = document.querySelectorAll('.upload-file-wrapper > input')
 
 if(photoUploaders.length) {
 	photoUploaders.forEach(photoUploader => {
@@ -246,8 +247,11 @@ if(photoUploaders.length) {
 			const modalUploaded = modalPhoto.querySelector('.modal-uploaded');
 
 			const progress = modalPhoto.querySelector('.modal-loading-progress-bar__filled')
+
 			const uploadedImage = modalUploaded.querySelector('.modal-uploaded img');
+
 			const saveChangesButton = modalPhoto.querySelector('.modal-uploaded__button');
+			const closeModal = modalPhoto.querySelector('.button-close-modal')
 
 			const [photo] = photoUploader.files
 			if(photo) {
@@ -257,7 +261,7 @@ if(photoUploaders.length) {
 			modalInformation.style.display = 'none'
 			modalLoading.style.display = 'flex'
 			
-			progress.classList.remove('finished')
+			progress.classList?.remove('finished')
 		
 			window.setTimeout(() => {
 				progress.classList.add('finished')
@@ -278,7 +282,62 @@ if(photoUploaders.length) {
 				modalPhoto.style.display = 'none'
 
 				modalInformation.style.display = 'grid'
-			}) 
+			})
+			
+			closeModal.addEventListener('click', () => {
+				modalUploaded.style.display = 'none'
+				modalPhoto.style.display = 'none'
+
+				modalInformation.style.display = 'grid'
+			})
+		})
+	})
+}
+
+if(fileUploaders.length) {
+	fileUploaders.forEach(fileUploader => {
+		fileUploader?.addEventListener('change', (e) => {
+			const modalInformation = modalFile.querySelector('.modal-information')
+			const modalLoading = modalFile.querySelector('.modal-loading');
+			const modalUploaded = modalFile.querySelector('.modal-loaded');
+
+			const progress = modalFile.querySelector('.modal-loading-progress-bar__filled')
+
+			const closeModal = modalFile.querySelector('.button-close-modal')
+
+			modalInformation.style.display = 'none'
+			modalLoading.style.display = 'flex'
+			
+			progress.classList?.remove('finished')
+		
+			window.setTimeout(() => {
+				progress.classList.add('finished')
+			}, 800)
+		
+			window.setTimeout(() => {
+				modalLoading.style.display = 'none'
+				modalUploaded.style.display = 'flex'
+			}, 2000)
+
+			window.setTimeout(() => {
+				modalLoading.style.display = 'none'
+				modalUploaded.style.display = 'flex'
+			}, 2000)
+			
+			closeModal.addEventListener('click', () => {
+				console.log('close')
+			})
+			
+			if (buttonsCloseModal.length) {
+				buttonsCloseModal.forEach((btn) => {
+					btn.addEventListener("click", (e) => {
+						modalUploaded.style.display = 'none'
+						modalPhoto.style.display = 'none'
+			
+						modalInformation.style.display = 'grid'
+					})
+				})
+			}
 		})
 	})
 }
