@@ -26,7 +26,6 @@
     gap: 10px;
     padding: 20px 20px 60px 20px;
     width: 630px;
-    height: 240px;
     background: $background-white;
     box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
 }
@@ -73,7 +72,7 @@
 }
 
 .modal-loaded {
-    display: none;
+    display: flex;
     height: 240px;
     flex-direction: column;
     align-items: center;
@@ -82,5 +81,24 @@
 
     &__text {
         font-size: 18px;
+    }
+}
+
+.modal-uploaded {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    &__image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 450px;
+    }
+
+    &__button {
+        width: 450px;
     }
 }
