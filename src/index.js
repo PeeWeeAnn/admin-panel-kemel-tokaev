@@ -241,13 +241,13 @@ const photoUploaders = document.querySelectorAll('.upload-photo-wrapper > input'
 if(photoUploaders.length) {
 	photoUploaders.forEach(photoUploader => {
 		photoUploader?.addEventListener('change', (e) => {
-			const modalInformation = document.querySelector('.modal-information')
-			const modalLoading = document.querySelector('.modal-loading');
-			const modalUploaded = document.querySelector('.modal-uploaded');
+			const modalInformation = modalPhoto.querySelector('.modal-information')
+			const modalLoading = modalPhoto.querySelector('.modal-loading');
+			const modalUploaded = modalPhoto.querySelector('.modal-uploaded');
 
-			const progress = document.querySelector('.modal-loading-progress-bar__filled')
-			const uploadedImage = document.querySelector('.modal-uploaded img');
-			const saveChangesButton = document.querySelector('.modal-uploaded__button');
+			const progress = modalPhoto.querySelector('.modal-loading-progress-bar__filled')
+			const uploadedImage = modalUploaded.querySelector('.modal-uploaded img');
+			const saveChangesButton = modalPhoto.querySelector('.modal-uploaded__button');
 
 			const [photo] = photoUploader.files
 			if(photo) {
@@ -256,6 +256,8 @@ if(photoUploaders.length) {
 		
 			modalInformation.style.display = 'none'
 			modalLoading.style.display = 'flex'
+			
+			progress.classList.remove('finished')
 		
 			window.setTimeout(() => {
 				progress.classList.add('finished')
@@ -266,8 +268,16 @@ if(photoUploaders.length) {
 				modalUploaded.style.display = 'flex'
 			}, 2000)
 
+			window.setTimeout(() => {
+				modalLoading.style.display = 'none'
+				modalUploaded.style.display = 'flex'
+			}, 2000)
+
 			saveChangesButton.addEventListener('click', () => {
+				modalUploaded.style.display = 'none'
 				modalPhoto.style.display = 'none'
+
+				modalInformation.style.display = 'grid'
 			}) 
 		})
 	})
