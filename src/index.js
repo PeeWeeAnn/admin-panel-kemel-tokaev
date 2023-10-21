@@ -207,11 +207,33 @@ const buttonDownloadFiles = document.querySelectorAll(".button-download-file")
 const modalPhoto = document.getElementById("modalPhoto")
 const modalFile = document.getElementById("modalFile")
 
+const modalQuotePhoto = document.getElementById("modalQuotePhoto")
+
+const modalPhotoCover = document.getElementById("modalPhotoCover")
+const modalPhotoPrinted = document.getElementById("modalPhotoPrinted")
+const modalFileAudio = document.getElementById("modalFileAudio")
+
+
 if (buttonDownloadPhotos) {
 	buttonDownloadPhotos.forEach((btn) => {
 		btn.addEventListener("click", (e) => {
 			e.preventDefault()
-			modalPhoto.style.display = "flex"
+
+			if(btn.classList.contains('button-download-photo-quote')) {
+
+				modalQuotePhoto.style.display = "flex"
+				console.log('Загрузка фото к цитате')
+				
+			} else if(btn.classList.contains('button-download-photo-cover')) {
+
+				modalPhotoPrinted.style.display = "flex"
+				console.log('Загрузка обложки')
+
+			} else {
+
+				modalPhoto.style.display = "flex"
+
+			}
 		})
 	})
 }
@@ -220,7 +242,22 @@ if (buttonDownloadFiles.length) {
 	buttonDownloadFiles.forEach((btn) => {
 		btn.addEventListener("click", (e) => {
 			e.preventDefault()
-			modalFile.style.display = "flex"
+			
+			if(btn.classList.contains('button-download-file-audio')) {
+				
+				modalFileAudio.style.display = "flex"
+				console.log('Загрузка аудиоверсии')
+				
+			} else if (btn.classList.contains('button-download-file-printed')) {
+				
+				modalPhotoCover.style.display = "flex"
+				console.log('Загрузка печатной версии')
+				
+			} else {
+
+				modalFile.style.display = "flex"
+
+			}
 		})
 	})
 }
