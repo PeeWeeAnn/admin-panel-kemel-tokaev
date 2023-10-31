@@ -122,6 +122,28 @@ input {
     font-weight: 500;
     line-height: 25.108px;
     letter-spacing: 0.08px;
+    resize: none;
+    overflow: auto;
+}
+
+textarea {
+    outline: none;
+    border-radius: 4px;
+    border: 1px solid $light-grey;
+    padding: 9px 15px;
+    width: calc(100% - 32px);
+    background: transparent;
+    color: $text-dark-grey;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 25.108px;
+    letter-spacing: 0.08px;
+    resize: none;
+    min-height: 6em;
+
+    &::-webkit-input-placeholder {
+        font-family: "Montserrat";
+    }
 }
 
 input:focus {

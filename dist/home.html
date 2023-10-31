@@ -1,587 +1,616 @@
 <!DOCTYPE html>
 <html lang="ru">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='reset.css'>
-    <link rel='stylesheet' href='style.css'>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <title>Главная страница</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <section class="home-section">
-        <div class="home-wrapper">
-            <aside class="sidebar">
-                <div class="sidebar__heading sidebar-heading">
-                    <div class="sidebar-heading__circle">
-                        <span>
-                            К
-                        </span>
+      <div class="home-wrapper">
+        <aside class="sidebar">
+          <div class="sidebar__heading sidebar-heading">
+            <div class="sidebar-heading__circle">
+              <span> К </span>
+            </div>
+            <h6 class="sidebar-heading__header">Кемель Токаев</h6>
+          </div>
+          <ul class="sidebar__navigation sidebar-navigation">
+            <li
+              class="sidebar-navigation__item sidebar-navigation-item__active"
+            >
+              <a class="sidebar-navigation__link" href="home.html">
+                <img
+                  class="sidebar-navigation__image"
+                  src="../src/img/icons/home.svg"
+                  alt=""
+                />
+                <span class="sidebar-navigation__text">Главная страница</span>
+              </a>
+            </li>
+            <li
+              class="sidebar-navigation__item sidebar-navigation-item__sections"
+            >
+              <a
+                class="sidebar-navigation__link"
+                href="section-creativity.html"
+              >
+                <img
+                  class="sidebar-navigation__image"
+                  src="../src/img/icons/file.svg"
+                  alt=""
+                />
+                <span class="sidebar-navigation__text">Разделы</span>
+              </a>
+              <ul class="sections__sub-navigation sections-sub-navigation">
+                <li class="sections-sub-navigation__item">
+                  <a
+                    class="sections-sub-navigation__link"
+                    href="section-creativity.html"
+                  >
+                    <div class="sections-sub-navigation__image">
+                      <img src="../src/img/icons/circle.svg" alt="" />
                     </div>
-                    <h6 class="sidebar-heading__header">
-                        Кемель Токаев
-                    </h6>
+                    <span class="sections-navigation__text">Творчество</span>
+                  </a>
+                </li>
+                <li class="sections-sub-navigation__item">
+                  <a
+                    class="sections-sub-navigation__link"
+                    href="section-word.html"
+                  >
+                    <div class="sections-sub-navigation__image">
+                      <img src="../src/img/icons/circle.svg" alt="" />
+                    </div>
+                    <span class="sections-navigation__text"
+                      >Слово о Кемеле</span
+                    >
+                  </a>
+                </li>
+                <li class="sections-sub-navigation__item sections-gallery">
+                  <a
+                    class="sections-sub-navigation__link"
+                    href="section-gallery-photo.html"
+                  >
+                    <div class="sections-sub-navigation__image">
+                      <img src="../src/img/icons/circle.svg" alt="" />
+                    </div>
+                    <span class="sections-navigation__text">Галерея</span>
+                  </a>
+                  <ul
+                    class="sections-gallery__sub-navigation sections-gallery-sub-navigation sub-navigation-hidden"
+                  >
+                    <li class="sections-gallery-sub-navigation__item">
+                      <a
+                        class="sections-gallery-sub-navigation__link"
+                        href="section-gallery-photo.html"
+                        >Фото</a
+                      >
+                    </li>
+                    <li class="sections-gallery-sub-navigation__item">
+                      <a
+                        class="sections-gallery-sub-navigation__link"
+                        href="section-gallery-interview.html"
+                        >Интервью</a
+                      >
+                    </li>
+                    <li class="sections-gallery-sub-navigation__item">
+                      <a
+                        class="sections-gallery-sub-navigation__link"
+                        href="section-gallery-film.html"
+                        >Фильмы</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <button class="sidebar__button sidebar-button button-dark-grey">
+            <img
+              class="sidebar-button__image"
+              src="../src/img/icons/sign-out.svg"
+              alt=""
+            />
+            Выйти
+          </button>
+        </aside>
+        <main class="home">
+          <header class="header">
+            <h1 class="header__heading">Главная страница</h1>
+            <div class="header__image">
+              <img src="../src/img/icons/avatar.svg" alt="" />
+            </div>
+          </header>
+          <div class="home__content home-content">
+            <div class="preview__version preview-version">
+              <span class="preview-version__text">Версии:</span>
+              <div class="preview-version__switch preview-version-switch">
+                <span class="preview-version-switch__text">Ru</span>
+                <label class="switch">
+                  <input
+                    class="switch__input"
+                    id="languageSwitch"
+                    type="checkbox"
+                  />
+                  <span class="switch__slider"></span>
+                </label>
+                <span class="preview-version-switch__text">Kz</span>
+              </div>
+            </div>
+            <div class="home-content__block home-content-block">
+              <div class="home-content-block__pick-chapter">
+                <label for="preview-section-creativity-section"
+                  >Выберите главу</label
+                >
+                <select id="preview-section-creativity-section">
+                  <option value="disabled" disabled selected>
+                    Выберите из списка
+                  </option>
+                  <option value="">Глава</option>
+                  <option value="">Глава</option>
+                  <option value="">Глава</option>
+                </select>
+              </div>
+              <form class="home-content-block__form home-content-block-form">
+                <div class="home-content-block-form__container">
+                  <label for="name-topic-rus">Заголовок главы</label>
+                  <input type="text" placeholder="" id="name-topic-rus" />
+                  <button id="editInput" class="button-edit">
+                    <img src="../src/img/icons/edit.svg" alt="" />
+                  </button>
                 </div>
-                <ul class="sidebar__navigation sidebar-navigation">
-                    <li class="sidebar-navigation__item sidebar-navigation-item__active">
-                        <a class="sidebar-navigation__link" href="home.html">
-                            <img class="sidebar-navigation__image" src="../src/img/icons/home.svg" alt="">
-                            <span class="sidebar-navigation__text">Главная страница</span>
-                        </a>
-                    </li>
-                    <li class="sidebar-navigation__item sidebar-navigation-item__sections">
-                        <a class="sidebar-navigation__link" href="section-creativity.html">
-                            <img class="sidebar-navigation__image" src="../src/img/icons/file.svg" alt="">
-                            <span class="sidebar-navigation__text">Разделы</span>
-                        </a>
-                        <ul class="sections__sub-navigation sections-sub-navigation">
-                            <li class="sections-sub-navigation__item">
-                                <a class="sections-sub-navigation__link" href="section-creativity.html">
-                                    <div class="sections-sub-navigation__image">
-                                        <img src="../src/img/icons/circle.svg" alt="">
-                                    </div>
-                                    <span class="sections-navigation__text">Творчество</span>
-                                </a>
-                            </li>
-                            <li class="sections-sub-navigation__item">
-                                <a class="sections-sub-navigation__link" href="section-word.html">
-                                    <div class="sections-sub-navigation__image">
-                                        <img src="../src/img/icons/circle.svg" alt="">
-                                    </div>
-                                    <span class="sections-navigation__text">Слово о Кемеле</span>
-                                </a>
-                            </li>
-                            <li class="sections-sub-navigation__item sections-gallery">
-                                <a class="sections-sub-navigation__link" href="section-gallery-photo.html">
-                                    <div class="sections-sub-navigation__image">
-                                        <img src="../src/img/icons/circle.svg" alt="">
-                                    </div>
-                                    <span class="sections-navigation__text">Галерея</span>
-                                </a>
-                                <ul
-                                    class="sections-gallery__sub-navigation sections-gallery-sub-navigation sub-navigation-hidden">
-                                    <li class="sections-gallery-sub-navigation__item">
-                                        <a class="sections-gallery-sub-navigation__link"
-                                            href="section-gallery-photo.html">Фото</a>
-                                    </li>
-                                    <li class="sections-gallery-sub-navigation__item">
-                                        <a class="sections-gallery-sub-navigation__link"
-                                            href="section-gallery-interview.html">Интервью</a>
-                                    </li>
-                                    <li class="sections-gallery-sub-navigation__item">
-                                        <a class="sections-gallery-sub-navigation__link"
-                                            href="section-gallery-film.html">Фильмы</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <button class="sidebar__button sidebar-button button-dark-grey">
-                    <img class="sidebar-button__image" src="../src/img/icons/sign-out.svg" alt="">
-                    Выйти
+                <div class="home-content-block-form__container">
+                  <label for="name-topic-kaz">Подзаголовок главы</label>
+                  <input type="text" placeholder="" id="name-topic-kaz" />
+                  <button id="editInput" class="button-edit">
+                    <img src="../src/img/icons/edit.svg" alt="" />
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="home-content__block home-content-block">
+              <form class="home-content-block__form home-content-block-form">
+                <div class="home-content-block-form__container">
+                  <label for="subtitle-kaz">Абзац №1</label>
+                  <textarea
+                    type="text"
+                    placeholder="Например промежуток времени, когда происходят события"
+                    id="subtitle-kaz"
+                  ></textarea>
+                  <button id="editInput" class="button-edit">
+                    <img src="../src/img/icons/edit.svg" alt="" />
+                  </button>
+                </div>
+              </form>
+              <form class="home-content-block__form home-content-block-form">
+                <div class="home-content-block-form__container">
+                  <label for="heading-paragraph-rus"
+                    >Заголовок для абзаца №2</label
+                  >
+                  <input
+                    type="text"
+                    placeholder=""
+                    id="heading-paragraph-rus"
+                  />
+                  <button id="editInput" class="button-edit">
+                    <img src="../src/img/icons/edit.svg" alt="" />
+                  </button>
+                </div>
+              </form>
+              <form class="home-content-block__form home-content-block-form">
+                <div class="home-content-block-form__container">
+                  <label for="subtitle-kaz">Абзац №2</label>
+                  <textarea
+                    type="text"
+                    placeholder="Например промежуток времени, когда происходят события"
+                    id="subtitle-kaz"
+                  ></textarea>
+                  <button id="editInput" class="button-edit">
+                    <img src="../src/img/icons/edit.svg" alt="" />
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="home-content__block home-content-block">
+              <form class="home-content-block__form home-content-block-form">
+                <div class="home-content-block-form__container">
+                  <label for="heading-paragraph-rus"
+                    >Добавьте описание (на русском)</label
+                  >
+                  <input
+                    type="text"
+                    placeholder="Основной текст на русском"
+                    id="
+                                main-text-rus"
+                  />
+                  <button id="editInput" class="button-edit">
+                    <img src="../src/img/icons/edit.svg" alt="" />
+                  </button>
+                </div>
+                <div class="home-content-block-form__container">
+                  <label for="heading-paragraph-kaz"
+                    >Добавьте описание (на казахском)</label
+                  >
+                  <input
+                    type="text"
+                    placeholder="Основной текст на казахском"
+                    id="main-text-kaz"
+                  />
+                  <button id="editInput" class="button-edit">
+                    <img src="../src/img/icons/edit.svg" alt="" />
+                  </button>
+                </div>
+              </form>
+              <div
+                class="home-content-block__form-wrapper home-content-block-form-wrapper home-content-block-form-photo"
+              >
+                <h3 class="home-content-block__header">Фото под абзацем</h3>
+                <form
+                  class="home-content-block__form home-content-block-form three-columns"
+                >
+                  <button
+                    class="home-content-block__button button-dark-grey-left button-download-photo"
+                  >
+                    <img src="../src/img/icons/load.svg" alt="" />
+                    Добавить фото
+                  </button>
+                </form>
+              </div>
+              <div
+                class="home-content-block__form-wrapper home-content-block-form-wrapper home-content-block-form-quote"
+              >
+                <h3 class="home-content-block__header">Цитаты</h3>
+                <form
+                  class="home-content-block__form home-content-block-form three-columns"
+                >
+                  <div class="home-content-block-form__container">
+                    <label for="quote-description-rus">Цитата №1</label>
+                    <input
+                      type="text"
+                      placeholder=""
+                      id="quote-description-rus"
+                    />
+                    <button id="editInput" class="button-edit">
+                      <img src="../src/img/icons/edit.svg" alt="" />
+                    </button>
+                  </div>
+                  <div class="home-content-block-form__container">
+                    <label for="quote-description-kaz">Цитата №2</label>
+                    <input
+                      type="text"
+                      placeholder=""
+                      id="quote-description-kaz"
+                    />
+                    <button id="editInput" class="button-edit">
+                      <img src="../src/img/icons/edit.svg" alt="" />
+                    </button>
+                  </div>
+                  <div class="home-content-block-form__container">
+                    <label for="quote-description-kaz">Цитата №3</label>
+                    <input
+                      type="text"
+                      placeholder=""
+                      id="quote-description-kaz"
+                    />
+                    <button id="editInput" class="button-edit">
+                      <img src="../src/img/icons/edit.svg" alt="" />
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <h3 class="home-content-block__header">Фото под абзацем</h3>
+              <form
+                class="home-content-block__form home-content-block-form three-columns"
+              >
+                <button
+                  class="home-content-block__button button-dark-grey-left button-download-photo"
+                >
+                  <img src="../src/img/icons/load.svg" alt="" />
+                  Добавить фото
                 </button>
-            </aside>
-            <main class="home">
-                <header class="header">
-                    <h1 class="header__heading">
-                        Главная страница
-                    </h1>
-                    <div class="header__image">
-                        <img src="../src/img/icons/avatar.svg" alt="">
-                    </div>
-                </header>
-                <div class="home__content home-content">
-                    <h2 class="home-content__header">
-                        Добавление новой главы
-                    </h2>
-                    <div class="home-content__block home-content-block">
-                        <h3 class="home-content-block__header">
-                            Заголовок
-                        </h3>
-                        <form class="home-content-block__form home-content-block-form">
-                            <div class="home-content-block-form__container">
-                                <label for="name-topic-rus">Название темы (русский язык)</label>
-                                <input type="text" placeholder="Введите название темы" id="name-topic-rus">
-                                <button id="editInput" class="button-edit">
-                                    <img src="../src/img/icons/edit.svg" alt="">
-                                </button>
-                            </div>
-                            <div class="home-content-block-form__container">
-                                <label for="name-topic-kaz">Название темы (казахский язык)</label>
-                                <input type="text" placeholder="Введите название темы" id="name-topic-kaz">
-                                <button id="editInput" class="button-edit">
-                                    <img src="../src/img/icons/edit.svg" alt="">
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="home-content__block home-content-block">
-                        <h3 class="home-content-block__header">
-                            Подзаголовок
-                        </h3>
-                        <form class="home-content-block__form home-content-block-form">
-                            <div class="home-content-block-form__container">
-                                <label for="subtitle-rus">Подзаголовок (русский язык)</label>
-                                <input type="text" placeholder="Например промежуток времени, когда происходят события"
-                                    id="subtitle-rus">
-                                <button id="editInput" class="button-edit">
-                                    <img src="../src/img/icons/edit.svg" alt="">
-                                </button>
-                            </div>
-                            <div class="home-content-block-form__container">
-                                <label for="subtitle-kaz">Подзаголовок (казахский язык)</label>
-                                <input type="text" placeholder="Например промежуток времени, когда происходят события"
-                                    id="subtitle-kaz">
-                                <button id="editInput" class="button-edit">
-                                    <img src="../src/img/icons/edit.svg" alt="">
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="home-content__block home-content-block">
-                        <h3 class="home-content-block__header">
-                            Абзац
-                        </h3>
-                        <form class="home-content-block__form home-content-block-form">
-                            <div class="home-content-block-form__container">
-                                <label for="heading-paragraph-rus">Заголовок для абзаца (на русском)</label>
-                                <input type="text" placeholder="Какой-то заголовок" id="heading-paragraph-rus">
-                                <button id="editInput" class="button-edit">
-                                    <img src="../src/img/icons/edit.svg" alt="">
-                                </button>
-                            </div>
-                            <div class="home-content-block-form__container">
-                                <label for="heading-paragraph-kaz">Заголовок для абзаца (на казахском)</label>
-                                <input type="text" placeholder="Какой-то заголовок" id="heading-paragraph-kaz">
-                                <button id="editInput" class="button-edit">
-                                    <img src="../src/img/icons/edit.svg" alt="">
-                                </button>
-                            </div>
-                        </form>
-                        <form class="home-content-block__form home-content-block-form">
-                            <div class="home-content-block-form__container">
-                                <label for="heading-paragraph-rus">Добавьте описание (на русском)</label>
-                                <input type="text" placeholder="Основной текст на русском" id="
-                                main-text-rus">
-                                <button id="editInput" class="button-edit">
-                                    <img src="../src/img/icons/edit.svg" alt="">
-                                </button>
-                            </div>
-                            <div class="home-content-block-form__container">
-                                <label for="heading-paragraph-kaz">Добавьте описание (на казахском)</label>
-                                <input type="text" placeholder="Основной текст на казахском" id="main-text-kaz">
-                                <button id="editInput" class="button-edit">
-                                    <img src="../src/img/icons/edit.svg" alt="">
-                                </button>
-                            </div>
-                        </form>
-                        <div
-                            class="home-content-block__form-wrapper home-content-block-form-wrapper home-content-block-form-photo">
-                            <h3 class="home-content-block__header">
-                                Фото
-                            </h3>
-                            <form class="home-content-block__form home-content-block-form three-columns">
-                                <button class="home-content-block__button button-dark-grey-left button-download-photo">
-                                    <img src="../src/img/icons/load.svg" alt="">
-                                    Загрузить фото
-                                </button>
-                                <div class="home-content-block-form__container">
-                                    <label for="photo-description-rus">Добавьте описание к фото (на русском)</label>
-                                    <input type="text" placeholder="Какое-то описание" id="photo-description-rus">
-                                    <button id="editInput" class="button-edit">
-                                        <img src="../src/img/icons/edit.svg" alt="">
-                                    </button>
-                                </div>
-                                <div class="home-content-block-form__container">
-                                    <label for="photo-description-kaz">Добавьте описание к фото (на казахском)</label>
-                                    <input type="text" placeholder="Какое-то описание" id="photo-description-kaz">
-                                    <button id="editInput" class="button-edit">
-                                        <img src="../src/img/icons/edit.svg" alt="">
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                        <div
-                            class="home-content-block__form-wrapper home-content-block-form-wrapper home-content-block-form-quote">
-                            <h3 class="home-content-block__header">
-                                Цитата
-                            </h3>
-                            <form class="home-content-block__form home-content-block-form three-columns">
-                                <button class="home-content-block__button button-dark-grey-left button-download-photo button-download-photo-quote">
-                                    <img src="../src/img/icons/load.svg" alt="">
-                                    Загрузить фото
-                                </button>
-                                <div class="home-content-block-form__container">
-                                    <label for="quote-description-rus">Добавьте описание (на русском)</label>
-                                    <input type="text" placeholder="Какое-то описание" id="quote-description-rus">
-                                    <button id="editInput" class="button-edit">
-                                        <img src="../src/img/icons/edit.svg" alt="">
-                                    </button>
-                                </div>
-                                <div class="home-content-block-form__container">
-                                    <label for="quote-description-kaz">Добавьте описание (на казахском)</label>
-                                    <input type="text" placeholder="Какое-то описание" id="quote-description-kaz">
-                                    <button id="editInput" class="button-edit">
-                                        <img src="../src/img/icons/edit.svg" alt="">
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="three-columns">
-                            <button id="attachPhoto" class="home-content-block__button button-dashed">
-                                <img src="../src/img/icons/add-round.svg" alt="">
-                                Привязать фото
-                            </button>
-                        </div>
-                        <div class="three-columns">
-                            <button id="attachQuote" class="home-content-block__button button-dashed">
-                                <img src="../src/img/icons/add-round.svg" alt="">
-                                Привязать цитату
-                            </button>
-                        </div>
-                    </div>
-                    <div class="three-columns">
-                        <button class="home-content__button button-dashed">
-                            <img src="../src/img/icons/add-round.svg" alt="">
-                            Добавить еще абзац
-                        </button>
-                    </div>
-                    <div class="home-content__block home-content-block">
-                        <h3 class="home-content-block__header">
-                            Структура страницы
-                        </h3>
-                        <div class="home-content-block__structure home-content-block-structure">
-                            <button class="button-structure">
-                                Выбрать это расположение
-                                <img src="../src/img/icons/add-round-white.svg" alt="">
-                            </button>
-                            <div class="home-content-block-structure__chapter home-content-block-structure-chapter">
-                                <div
-                                    class="home-content-block-structure-chapter__information home-content-block-structure-chapter-information">
-                                    <span class="home-content-block-structure-chapter-information__chapter">Глава</span>
-                                    <span class="home-content-block-structure-chapter-information__name">Детство</span>
-                                </div>
-                                <div class="home-content-block-structure-chapter__buttons">
-                                    <button class="home-content-block-structure-chapter__button">
-                                        <img src="../src/img/icons/close.svg" alt="">
-                                    </button>
-                                    <div class="home-content-block-structure-chapter__line"></div>
-                                    <button class="home-content-block-structure-chapter__button">
-                                        <img src="../src/img/icons/context.svg" alt="">
-                                    </button>
-                                </div>
-                            </div>
-                            <button class="button-structure">
-                                Выбрать это расположение
-                                <img src="../src/img/icons/add-round-white.svg" alt="">
-                            </button>
-                            <div class="home-content-block-structure__chapter home-content-block-structure-chapter">
-                                <div
-                                    class="home-content-block-structure-chapter__information home-content-block-structure-chapter-information">
-                                    <span class="home-content-block-structure-chapter-information__chapter">Глава</span>
-                                    <span class="home-content-block-structure-chapter-information__name">Детство</span>
-                                </div>
-                                <div class="home-content-block-structure-chapter__buttons">
-                                    <button class="home-content-block-structure-chapter__button">
-                                        <img src="../src/img/icons/close.svg" alt="">
-                                    </button>
-                                    <div class="home-content-block-structure-chapter__line"></div>
-                                    <button class="home-content-block-structure-chapter__button">
-                                        <img src="../src/img/icons/context.svg" alt="">
-                                    </button>
-                                </div>
-                            </div>
-                            <button class="button-structure">
-                                Выбрать это расположение
-                                <img src="../src/img/icons/add-round-white.svg" alt="">
-                            </button>
-                            <div class="home-content-block-structure__chapter home-content-block-structure-chapter">
-                                <div
-                                    class="home-content-block-structure-chapter__information home-content-block-structure-chapter-information">
-                                    <span class="home-content-block-structure-chapter-information__chapter">Глава</span>
-                                    <span class="home-content-block-structure-chapter-information__name">Детство</span>
-                                </div>
-                                <div class="home-content-block-structure-chapter__buttons">
-                                    <button class="home-content-block-structure-chapter__button">
-                                        <img src="../src/img/icons/close.svg" alt="">
-                                    </button>
-                                    <div class="home-content-block-structure-chapter__line"></div>
-                                    <button class="home-content-block-structure-chapter__button">
-                                        <img src="../src/img/icons/context.svg" alt="">
-                                    </button>
-                                </div>
-                            </div>
-                            <button class="button-structure">
-                                Выбрать это расположение
-                                <img src="../src/img/icons/add-round-white.svg" alt="">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="home-content__saving home-content-saving">
-                        <div class="home-content-saving__buttons home-content-saving-button three-columns">
-                            <button id="previewButtonHome" class="home-content-saving-button__button button-grey">
-                                <img src="../src/img/icons/view-white.svg" alt="">
-                                Предпросмотр
-                            </button>
-                            <button class="home-content-saving-button__button button-dark-grey save-all">
-                                <img src="../src/img/icons/add-round-dark.svg" alt="">
-                                Сохранить изменения
-                            </button>
-                        </div>
-                        <div class="home-content-saving__line">
-                        </div>
-                        <div class="three-columns">
-                            <button class="home-content-saving__button button-dashed">
-                                <img src="../src/img/icons/add-round.svg" alt="">
-                                Добавить главу
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </main>
-        </div>
+                <textarea
+                    type="text"
+                    placeholder="Например промежуток времени, когда происходят события"
+                    id="subtitle-kaz"
+                  ></textarea>
+              </form>
+            </div>
+
+            <div class="home-content__saving home-content-saving">
+              <div
+                class="home-content-saving__buttons home-content-saving-button three-columns"
+              >
+                <button
+                  class="home-content-saving-button__button button-dark-grey save-all"
+                >
+                  <img src="../src/img/icons/add-round-dark.svg" alt="" />
+                  Сохранить изменения
+                </button>
+              </div>
+              <div class="home-content-saving__line"></div>
+              <div class="three-columns">
+                <button class="home-content-saving__button button-dashed">
+                  <img src="../src/img/icons/add-round.svg" alt="" />
+                  Добавить главу
+                </button>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
     </section>
 
     <section id="previewHome" class="preview preview-home">
-        <div class="preview-wrapper">
-            <div class="preview__close">
-                <button class="button-close button-close-preview">
-                    <img src="../src/img/icons/close.svg" alt="">
-                </button>
-            </div>
-            <div class="preview__version preview-version">
-                <span class="preview-version__text">Версии:</span>
-                <div class="preview-version__switch preview-version-switch">
-                    <span class="preview-version-switch__text">Ru</span>
-                    <label class="switch">
-                        <input class="switch__input" id="languageSwitch" type="checkbox">
-                        <span class="switch__slider"></span>
-                    </label>
-                    <span class="preview-version-switch__text">Kz</span>
-                </div>
-            </div>
-            <div class="preview__section">
-                <label for="preview-section-creativity-section">Выберите главу</label>
-                <select id="preview-section-creativity-section">
-                    <option value="disabled" disabled selected>Выберите из списка</option>
-                    <option value="">Глава</option>
-                    <option value="">Глава</option>
-                    <option value="">Глава</option>
-                </select>
-            </div>
-            <div class="preview__information preview-information">
-                <div class="preview-information__heading">
-                    <h4>Глава №1</h4>
-                    <button class="button-close">
-                        <img src="../src/img/icons/close.svg" alt="">
-                    </button>
-                </div>
-                <form class="preview-information__form preview-information-form" action="">
-                    <div class="preview-information-form__wrapper">
-                        <label for="name-topic-rus">Название темы</label>
-                        <input type="text" placeholder="Введите название темы" id="name-topic-rus">
-                        <button id="editInput" class="button-edit">
-                            <img src="../src/img/icons/edit.svg" alt="">
-                        </button>
-                    </div>
-                    <div class="preview-information-form__wrapper">
-                        <label for="subtitle-rus">Подзаголовок</label>
-                        <input type="text" placeholder="Например промежуток времени, когда происходят события"
-                            id="subtitle-rus">
-                        <button id="editInput" class="button-edit">
-                            <img src="../src/img/icons/edit.svg" alt="">
-                        </button>
-                    </div>
-                    <div class="preview-information-form__wrapper">
-                        <label for="heading-paragraph-rus">Заголовок для абзаца</label>
-                        <input type="text" placeholder="Какой-то заголовок" id="heading-paragraph-rus">
-                        <button id="editInput" class="button-edit">
-                            <img src="../src/img/icons/edit.svg" alt="">
-                        </button>
-                    </div>
-                    <div class="preview-information-form__wrapper">
-                        <label for="heading-paragraph-rus">Описание</label>
-                        <input type="text" placeholder="Основной текст на русском" id="
-                        main-text-rus">
-                        <button id="editInput" class="button-edit">
-                            <img src="../src/img/icons/edit.svg" alt="">
-                        </button>
-                    </div>
-                    <div class="preview-information-form__wrapper">
-                        <label for="book1-language-writing">Фото</label>
-                        <button class="home-content-block__button button-dark-grey-left button-download-photo">
-                            <img src="../src/img/icons/load.svg" alt="">
-                            Загрузить фото
-                        </button>
-                        <button id="editInput" class="button-edit">
-                            <img src="../src/img/icons/edit.svg" alt="">
-                        </button>
-                    </div>
-                    <div class="preview-information-form__wrapper">
-                        <label for="photo-description-rus">Описание к фото</label>
-                        <input type="text" placeholder="Какое-то описание" id="photo-description-rus">
-                        <button id="editInput" class="button-edit">
-                            <img src="../src/img/icons/edit.svg" alt="">
-                        </button>
-                    </div>
-                    <div class="preview-information-form__wrapper">
-                        <label for="book1-audio-version">Цитата</label>
-                        <button class="home-content-block__button button-dark-grey-left button-download-photo button-download-photo-quote">
-                            <img src="../src/img/icons/load.svg" alt="">
-                            Загрузить фото
-                        </button>
-                        <button id="editInput" class="button-edit">
-                            <img src="../src/img/icons/edit.svg" alt="">
-                        </button>
-                    </div>
-                    <div class="preview-information-form__wrapper">
-                        <label for="quote-description-rus">Описание к цитате</label>
-                        <input type="text" placeholder="Какое-то описание" id="quote-description-rus">
-                        <button id="editInput" class="button-edit">
-                            <img src="../src/img/icons/edit.svg" alt="">
-                        </button>
-                    </div>
-                </form>
-                <div class="preview-information__button">
-                    <button class="button-dark-grey save-all">
-                        <img src="../src/img/icons/add-round-dark.svg" alt="">
-                        Сохранить изменения
-                    </button>
-                </div>
-            </div>
+      <div class="preview-wrapper">
+        <div class="preview__close">
+          <button class="button-close button-close-preview">
+            <img src="../src/img/icons/close.svg" alt="" />
+          </button>
         </div>
+        <div class="preview__version preview-version">
+          <span class="preview-version__text">Версии:</span>
+          <div class="preview-version__switch preview-version-switch">
+            <span class="preview-version-switch__text">Ru</span>
+            <label class="switch">
+              <input
+                class="switch__input"
+                id="languageSwitch"
+                type="checkbox"
+              />
+              <span class="switch__slider"></span>
+            </label>
+            <span class="preview-version-switch__text">Kz</span>
+          </div>
+        </div>
+        <div class="preview__section">
+          <label for="preview-section-creativity-section">Выберите главу</label>
+          <select id="preview-section-creativity-section">
+            <option value="disabled" disabled selected>
+              Выберите из списка
+            </option>
+            <option value="">Глава</option>
+            <option value="">Глава</option>
+            <option value="">Глава</option>
+          </select>
+        </div>
+        <div class="preview__information preview-information">
+          <div class="preview-information__heading">
+            <h4>Глава №1</h4>
+            <button class="button-close">
+              <img src="../src/img/icons/close.svg" alt="" />
+            </button>
+          </div>
+          <form
+            class="preview-information__form preview-information-form"
+            action=""
+          >
+            <div class="preview-information-form__wrapper">
+              <label for="name-topic-rus">Название темы</label>
+              <input
+                type="text"
+                placeholder="Введите название темы"
+                id="name-topic-rus"
+              />
+              <button id="editInput" class="button-edit">
+                <img src="../src/img/icons/edit.svg" alt="" />
+              </button>
+            </div>
+            <div class="preview-information-form__wrapper">
+              <label for="subtitle-rus">Подзаголовок</label>
+              <input
+                type="text"
+                placeholder="Например промежуток времени, когда происходят события"
+                id="subtitle-rus"
+              />
+              <button id="editInput" class="button-edit">
+                <img src="../src/img/icons/edit.svg" alt="" />
+              </button>
+            </div>
+            <div class="preview-information-form__wrapper">
+              <label for="heading-paragraph-rus">Заголовок для абзаца</label>
+              <input
+                type="text"
+                placeholder="Какой-то заголовок"
+                id="heading-paragraph-rus"
+              />
+              <button id="editInput" class="button-edit">
+                <img src="../src/img/icons/edit.svg" alt="" />
+              </button>
+            </div>
+            <div class="preview-information-form__wrapper">
+              <label for="heading-paragraph-rus">Описание</label>
+              <input
+                type="text"
+                placeholder="Основной текст на русском"
+                id="
+                        main-text-rus"
+              />
+              <button id="editInput" class="button-edit">
+                <img src="../src/img/icons/edit.svg" alt="" />
+              </button>
+            </div>
+            <div class="preview-information-form__wrapper">
+              <label for="book1-language-writing">Фото</label>
+              <button
+                class="home-content-block__button button-dark-grey-left button-download-photo"
+              >
+                <img src="../src/img/icons/load.svg" alt="" />
+                Загрузить фото
+              </button>
+              <button id="editInput" class="button-edit">
+                <img src="../src/img/icons/edit.svg" alt="" />
+              </button>
+            </div>
+            <div class="preview-information-form__wrapper">
+              <label for="photo-description-rus">Описание к фото</label>
+              <input
+                type="text"
+                placeholder="Какое-то описание"
+                id="photo-description-rus"
+              />
+              <button id="editInput" class="button-edit">
+                <img src="../src/img/icons/edit.svg" alt="" />
+              </button>
+            </div>
+            <div class="preview-information-form__wrapper">
+              <label for="book1-audio-version">Цитата</label>
+              <button
+                class="home-content-block__button button-dark-grey-left button-download-photo button-download-photo-quote"
+              >
+                <img src="../src/img/icons/load.svg" alt="" />
+                Загрузить фото
+              </button>
+              <button id="editInput" class="button-edit">
+                <img src="../src/img/icons/edit.svg" alt="" />
+              </button>
+            </div>
+            <div class="preview-information-form__wrapper">
+              <label for="quote-description-rus">Описание к цитате</label>
+              <input
+                type="text"
+                placeholder="Какое-то описание"
+                id="quote-description-rus"
+              />
+              <button id="editInput" class="button-edit">
+                <img src="../src/img/icons/edit.svg" alt="" />
+              </button>
+            </div>
+          </form>
+          <div class="preview-information__button">
+            <button class="button-dark-grey save-all">
+              <img src="../src/img/icons/add-round-dark.svg" alt="" />
+              Сохранить изменения
+            </button>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="modalPhoto" class="modal modal-photo">
-        <div class="modal-wrapper">
-            <div class="modal__close">
-                <button class="button-close button-close-modal">
-                    <img src="../src/img/icons/close.svg" alt="">
-                </button>
-            </div>
-            <div class="modal__information modal-information">
-                <div class="modal-information__image">
-                    <img src="../src/img/icons/modal-download.svg" alt="">
-                </div>
-                <span class="modal-information__text">
-                    Загрузите фото или перетащите в эту область
-                </span>
-                <div class="upload-photo-wrapper">
-                    <button class="modal-information__button button-dark-grey">
-                        <img src="../src/img/icons/load.svg" alt="">
-                        Загрузить фото
-                    </button>
-                    <input type="file" id="home-photo">
-                </div>
-            </div>
-            <div class="modal__drag-drop modal-drag-drop">
-                <span class="modal-drag-drop__text">
-                    Перетащите файлы в эту область или нажмите для выбора. Файлы изображений до 5 Мб (JPG, PNG, GIF).
-                </span>
-            </div>
-            <div class="modal__loading modal-loading">
-                <div class="modal-loading__image">
-                    <img src="../src/img/icons/modal-photo.svg" alt="">
-                </div>
-                <div class="modal-loading__progress-bar modal-loading-progress-bar">
-                    <div class="modal-loading-progress-bar__empty"></div>
-                    <div class="modal-loading-progress-bar__filled"></div>
-                </div>
-                <span class="modal-loading__text">
-                    Загружаем
-                </span>
-            </div>
-            <div class="modal__uploaded modal-uploaded">
-                <div class="modal-uploaded__image">
-                    <img src="../src/img/image/section/photo.png" alt="">
-                </div>
-                <button class="modal-uploaded__button button-dark-grey">
-                    Сохранить изменения
-                </button>
-            </div>
+      <div class="modal-wrapper">
+        <div class="modal__close">
+          <button class="button-close button-close-modal">
+            <img src="../src/img/icons/close.svg" alt="" />
+          </button>
         </div>
+        <div class="modal__information modal-information">
+          <div class="modal-information__image">
+            <img src="../src/img/icons/modal-download.svg" alt="" />
+          </div>
+          <span class="modal-information__text">
+            Загрузите фото или перетащите в эту область
+          </span>
+          <div class="upload-photo-wrapper">
+            <button class="modal-information__button button-dark-grey">
+              <img src="../src/img/icons/load.svg" alt="" />
+              Загрузить фото
+            </button>
+            <input type="file" id="home-photo" />
+          </div>
+        </div>
+        <div class="modal__drag-drop modal-drag-drop">
+          <span class="modal-drag-drop__text">
+            Перетащите файлы в эту область или нажмите для выбора. Файлы
+            изображений до 5 Мб (JPG, PNG, GIF).
+          </span>
+        </div>
+        <div class="modal__loading modal-loading">
+          <div class="modal-loading__image">
+            <img src="../src/img/icons/modal-photo.svg" alt="" />
+          </div>
+          <div class="modal-loading__progress-bar modal-loading-progress-bar">
+            <div class="modal-loading-progress-bar__empty"></div>
+            <div class="modal-loading-progress-bar__filled"></div>
+          </div>
+          <span class="modal-loading__text"> Загружаем </span>
+        </div>
+        <div class="modal__uploaded modal-uploaded">
+          <div class="modal-uploaded__image">
+            <img src="../src/img/image/section/photo.png" alt="" />
+          </div>
+          <button class="modal-uploaded__button button-dark-grey">
+            Сохранить изменения
+          </button>
+        </div>
+      </div>
     </section>
 
     <section id="modalQuotePhoto" class="modal modal-photo">
-        <div class="modal-wrapper">
-            <div class="modal__close">
-                <button class="button-close button-close-modal">
-                    <img src="../src/img/icons/close.svg" alt="">
-                </button>
-            </div>
-            <div class="modal__information modal-information">
-                <div class="modal-information__image">
-                    <img src="../src/img/icons/modal-download.svg" alt="">
-                </div>
-                <span class="modal-information__text">
-                    Загрузите фото или перетащите в эту область
-                </span>
-                <div class="upload-photo-wrapper">
-                    <button class="modal-information__button button-dark-grey">
-                        <img src="../src/img/icons/load.svg" alt="">
-                        Загрузить фото
-                    </button>
-                    <input type="file" id="home-photo-quote">
-                </div>
-            </div>
-            <div class="modal__drag-drop modal-drag-drop">
-                <span class="modal-drag-drop__text">
-                    Перетащите файлы в эту область или нажмите для выбора. Файлы изображений до 5 Мб (JPG, PNG, GIF).
-                </span>
-            </div>
-            <div class="modal__loading modal-loading">
-                <div class="modal-loading__image">
-                    <img src="../src/img/icons/modal-photo.svg" alt="">
-                </div>
-                <div class="modal-loading__progress-bar modal-loading-progress-bar">
-                    <div class="modal-loading-progress-bar__empty"></div>
-                    <div class="modal-loading-progress-bar__filled"></div>
-                </div>
-                <span class="modal-loading__text">
-                    Загружаем
-                </span>
-            </div>
-            <div class="modal__uploaded modal-uploaded">
-                <div class="modal-uploaded__image">
-                    <img src="../src/img/image/section/photo.png" alt="">
-                </div>
-                <button class="modal-uploaded__button button-dark-grey">
-                    Сохранить изменения
-                </button>
-            </div>
+      <div class="modal-wrapper">
+        <div class="modal__close">
+          <button class="button-close button-close-modal">
+            <img src="../src/img/icons/close.svg" alt="" />
+          </button>
         </div>
+        <div class="modal__information modal-information">
+          <div class="modal-information__image">
+            <img src="../src/img/icons/modal-download.svg" alt="" />
+          </div>
+          <span class="modal-information__text">
+            Загрузите фото или перетащите в эту область
+          </span>
+          <div class="upload-photo-wrapper">
+            <button class="modal-information__button button-dark-grey">
+              <img src="../src/img/icons/load.svg" alt="" />
+              Загрузить фото
+            </button>
+            <input type="file" id="home-photo-quote" />
+          </div>
+        </div>
+        <div class="modal__drag-drop modal-drag-drop">
+          <span class="modal-drag-drop__text">
+            Перетащите файлы в эту область или нажмите для выбора. Файлы
+            изображений до 5 Мб (JPG, PNG, GIF).
+          </span>
+        </div>
+        <div class="modal__loading modal-loading">
+          <div class="modal-loading__image">
+            <img src="../src/img/icons/modal-photo.svg" alt="" />
+          </div>
+          <div class="modal-loading__progress-bar modal-loading-progress-bar">
+            <div class="modal-loading-progress-bar__empty"></div>
+            <div class="modal-loading-progress-bar__filled"></div>
+          </div>
+          <span class="modal-loading__text"> Загружаем </span>
+        </div>
+        <div class="modal__uploaded modal-uploaded">
+          <div class="modal-uploaded__image">
+            <img src="../src/img/image/section/photo.png" alt="" />
+          </div>
+          <button class="modal-uploaded__button button-dark-grey">
+            Сохранить изменения
+          </button>
+        </div>
+      </div>
     </section>
 
     <section id="modalDelete" class="modal modal-delete">
-        <div class="modal-wrapper">
-            <div class="modal__close">
-                <button class="button-close button-close-modal">
-                    <img src="../src/img/icons/close.svg" alt="">
-                </button>
-            </div>
-            <h4 class="modal__header">
-                Вы уверены, что хотите удалить данный элемент?
-            </h4>
-            <div class="modal__buttons">
-                <button class="button-grey">
-                    Отменить
-                </button>
-                <button class="button-dark-grey">
-                    Подтвердить
-                </button>
-            </div>
+      <div class="modal-wrapper">
+        <div class="modal__close">
+          <button class="button-close button-close-modal">
+            <img src="../src/img/icons/close.svg" alt="" />
+          </button>
         </div>
+        <h4 class="modal__header">
+          Вы уверены, что хотите удалить данный элемент?
+        </h4>
+        <div class="modal__buttons">
+          <button class="button-grey">Отменить</button>
+          <button class="button-dark-grey">Подтвердить</button>
+        </div>
+      </div>
     </section>
 
     <script src="bundle.js"></script>
-</body>
-
+  </body>
 </html>
