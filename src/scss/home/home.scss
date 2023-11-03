@@ -29,7 +29,7 @@
     background: $background-white;
 
     &__pick-chapter {
-        width: 45%;
+        width: calc(50% - 25px);
     }
 }
 
@@ -45,7 +45,7 @@
 }
 
 .home-content-block-form-wrapper {
-    display: block;
+    display: flex;
     flex-direction: column;
     gap: 20px;
 }

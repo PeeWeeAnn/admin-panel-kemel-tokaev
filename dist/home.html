@@ -256,14 +256,23 @@
               >
                 <h3 class="home-content-block__header">Фото под абзацем</h3>
                 <form
-                  class="home-content-block__form home-content-block-form three-columns"
+                  class="home-content-block__form home-content-block-form two-columns"
                 >
                   <button
                     class="home-content-block__button button-dark-grey-left button-download-photo"
                   >
-                    <img src="../src/img/icons/load.svg" alt="" />
                     Добавить фото
+                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 6.5L12 18.5" stroke="#424242" stroke-width="2" stroke-linecap="round"/>
+                      <path d="M18 12.5L6 12.5" stroke="#424242" stroke-width="2" stroke-linecap="round"/>
+                    </svg>                      
                   </button>
+                  <div style="position: relative;">
+                    <button class="remove-photo-button">
+                      <img src="../src/img/icons/trash.svg" alt="">
+                    </button>
+                    <img class="photo-preview" src="./99d6325a65220b9c563c.png" alt="Прикрепленная фотография">
+                  </div>
                 </form>
               </div>
               <div
@@ -271,7 +280,7 @@
               >
                 <h3 class="home-content-block__header">Цитаты</h3>
                 <form
-                  class="home-content-block__form home-content-block-form three-columns"
+                  class="home-content-block__form home-content-block-form rows"
                 >
                   <div class="home-content-block-form__container">
                     <label for="quote-description-rus">Цитата №1</label>
@@ -310,14 +319,23 @@
               </div>
               <h3 class="home-content-block__header">Фото под абзацем</h3>
               <form
-                class="home-content-block__form home-content-block-form three-columns"
+                class="home-content-block__form home-content-block-form two-columns"
               >
                 <button
                   class="home-content-block__button button-dark-grey-left button-download-photo"
                 >
-                  <img src="../src/img/icons/load.svg" alt="" />
                   Добавить фото
+                  <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 6.5L12 18.5" stroke="#424242" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M18 12.5L6 12.5" stroke="#424242" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
                 </button>
+                <div style="position: relative;">
+                  <button class="remove-photo-button">
+                    <img src="../src/img/icons/trash.svg" alt="">
+                  </button>
+                  <img class="photo-preview" src="./99d6325a65220b9c563c.png" alt="Прикрепленная фотография">
+                </div>
                 <textarea
                     type="text"
                     placeholder="Например промежуток времени, когда происходят события"

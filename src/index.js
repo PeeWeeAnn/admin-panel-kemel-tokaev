@@ -210,8 +210,12 @@ const modalFile = document.getElementById("modalFile")
 const modalQuotePhoto = document.getElementById("modalQuotePhoto")
 
 const modalPhotoCover = document.getElementById("modalPhotoCover")
+
 const modalPhotoPrinted = document.getElementById("modalPhotoPrinted")
 const modalFileAudio = document.getElementById("modalFileAudio")
+
+const modalPhotoPrintedKz = document.getElementById("modalPhotoPrintedKz")
+const modalFileAudioKz = document.getElementById("modalFileAudioKz")
 
 
 if (buttonDownloadPhotos) {
@@ -248,13 +252,22 @@ if (buttonDownloadFiles.length) {
 				modalFileAudio.style.display = "flex"
 				console.log('Загрузка аудиоверсии')
 				
-			} else if (btn.classList.contains('button-download-file-printed')) {
+			} else if (btn.classList.contains('button-download-file-audio-kz')) {
+
+				modalFileAudioKz.style.display = "flex"
+				console.log('Загрузка KZ аудиоверсии')
 				
-				modalPhotoCover.style.display = "flex"
+			} else if (btn.classList.contains('button-download-file-printed')) {
+
+				modalPhotoPrinted.style.display = "flex"
 				console.log('Загрузка печатной версии')
 				
-			} else {
+			} else if (btn.classList.contains('button-download-file-printed-kz')) {
 
+				modalPhotoPrintedKz.style.display = "flex"
+				console.log('Загрузка KZ печатной версии')
+
+			} else {
 				modalFile.style.display = "flex"
 
 			}
@@ -292,6 +305,17 @@ if(photoUploaders.length) {
 
 			const [photo] = photoUploader.files
 			if(photo) {
+				// Фото, которое будет показываться в разделе
+				const newImg = document.createElement("img")
+				newImg.src = URL.createObjectURL(photo)
+				newImg.classList?.add('photo-preview')
+
+				const homeContentBlockForm = document.querySelectorAll('.home-content-block-form')
+
+				homeContentBlockForm[5]?.append(newImg);
+				homeContentBlockForm[7]?.append(newImg);
+
+				// Предпросмотр в модалке
 				uploadedImage.src = URL.createObjectURL(photo)
 			}
 		

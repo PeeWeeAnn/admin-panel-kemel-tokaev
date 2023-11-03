@@ -138,7 +138,7 @@ textarea {
     font-weight: 500;
     line-height: 25.108px;
     letter-spacing: 0.08px;
-    resize: none;
+    resize: vertical;
     min-height: 6em;
 
     &::-webkit-input-placeholder {
@@ -250,6 +250,35 @@ select:disabled {
     img {
         padding-right: 18px;
     }
+
+    &.button-download-photo {
+        color: #424242;
+        background: #ececec;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 400px;
+        height: 300px;
+
+        svg {
+            margin-left: 20px;
+        }
+    }
+}
+
+.photo-preview {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.remove-photo-button {
+    width: 44px;
+    height: 44px;
+    top: 7px;
+    right: 7px;
+    background: transparent;
+    position: absolute;
 }
 
 .button-grey {
@@ -320,9 +349,22 @@ select:disabled {
     display: none;
 }
 
+.two-columns {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
 .three-columns {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.rows {
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
     gap: 20px;
 }
 
